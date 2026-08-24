@@ -27,10 +27,10 @@
   <div class="wrap nav-inner">
     <a id="brand" class="brand" href="#top">Andrzej Lis</a>
     <nav class="nav-links" aria-label="Main navigation">
-      <a href="#work">Work</a>
-      <a href="#backend">Backend</a>
       <a href="#experience">Experience</a>
-      <a href="#breadth">Depth</a>
+      <a href="#work">Engineering</a>
+      <a href="#backend">Expertise</a>
+      <a href="#breadth">Systems</a>
       <a href="#education">Education</a>
       <a class="keep" id="github-top" href="https://github.com/lisu188" target="_blank" rel="noreferrer">GitHub ↗</a>
     </nav>
@@ -42,7 +42,7 @@
     <div>
       <div id="hero-badge" class="badge">Senior Software Engineer / Lead Engineer · Java / Kotlin · Kraków</div>
       <h1>I build reliable backend systems.<span>And go deep when the problem demands it.</span></h1>
-      <p id="hero-summary" class="hero-copy">Senior software engineer focused on JVM backend architecture, cloud systems and technical leadership, with hands-on depth in C++, performance engineering, game technology and reverse engineering.</p>
+      <p id="hero-summary" class="hero-copy">Senior software engineer focused on JVM backend architecture, cloud systems and technical leadership. My professional work spans production Java/Kotlin services; independent engineering adds systems-level depth.</p>
       <div class="actions">
         <a id="cv-top" class="btn primary" href="assets/Andrzej-Lis-CV.pdf" download>Download CV</a>
         <a id="linkedin-top" class="btn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
@@ -51,12 +51,13 @@
     </div>
     <aside class="hero-aside" aria-label="Profile">
       <div class="portrait"><img id="avatar" src="" alt=""></div>
-      <div class="mini-proof">
-        <small>Primary focus</small>
-        <strong>Java · Kotlin · Spring · Messaging</strong>
+      <div class="mini-proof mini-proof--professional">
+        <small>Professional track record</small>
+        <strong>EPAM · Google Fiber · Sabre · Motorola</strong>
+        <span>12+ years building production systems</span>
       </div>
       <a id="nouraajd-hero-link" class="mini-proof mini-proof--featured" href="https://github.com/lisu188/fall-of-nouraajd" target="_blank" rel="noreferrer">
-        <small>Featured systems project</small>
+        <small>Featured independent engineering</small>
         <strong>Fall of Nouraajd</strong>
         <span>Custom C++ engine · Python · automated gameplay</span>
         <em>Explore project ↗</em>
@@ -66,13 +67,27 @@
 
   <div id="signals" class="wrap signals" aria-label="Engineering highlights"></div>
 
-  <section id="work">
+  <section id="experience" class="professional-section">
     <div class="wrap">
       <div class="section-head">
-        <div class="kicker">Selected work</div>
+        <div class="kicker">Professional experience</div>
         <div>
-          <h2>Systems built to be understood, tested and changed.</h2>
-          <p class="section-copy">A selection of backend and systems projects that show how I approach architecture, correctness, automation and difficult technical constraints.</p>
+          <h2>Production systems, technical leadership and delivery.</h2>
+          <p class="section-copy">12+ years of commercial software engineering across telecom and aviation systems, spanning hands-on implementation, architecture, system ownership, cross-team delivery and technical leadership.</p>
+        </div>
+      </div>
+      <div id="experience-list" class="experience-list"></div>
+      <article id="impact-story" class="impact-story"></article>
+    </div>
+  </section>
+
+  <section id="work" class="independent-section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Independent engineering</div>
+        <div>
+          <h2>Systems I own end to end.</h2>
+          <p class="section-copy">Public systems I design and build independently, with end-to-end ownership of architecture, implementation, automation and technical constraints.</p>
         </div>
       </div>
 
@@ -85,7 +100,7 @@
             <ul id="flagship-decisions" class="decision-list"></ul>
             <div id="flagship-tags"></div>
             <div class="quality"><strong>Quality:</strong> <span id="flagship-quality"></span></div>
-            <a id="flagship-link" class="text-link" href="#" target="_blank" rel="noreferrer">View repository ↗</a>
+            <a id="flagship-link" class="text-link" href="#" target="_blank" rel="noreferrer">Explore source code ↗</a>
           </div>
           <div class="arch-diagram" aria-label="WinRisk architecture diagram">
             <svg viewBox="0 0 560 330" role="img" aria-labelledby="winrisk-arch-title">
@@ -116,7 +131,7 @@
             <div id="nouraajd-proofs" class="proof-grid"></div>
             <div id="nouraajd-tags"></div>
             <div class="inline-links">
-              <a id="nouraajd-link" class="text-link" href="#" target="_blank" rel="noreferrer">View repository ↗</a>
+              <a id="nouraajd-link" class="text-link" href="#" target="_blank" rel="noreferrer">Explore source code ↗</a>
               <a id="nouraajd-walkthrough" class="text-link text-link--accent" href="#" target="_blank" rel="noreferrer">Watch automated walkthrough ↗</a>
             </div>
           </div>
@@ -139,8 +154,8 @@
             <ul id="kotlin-decisions" class="decision-list"></ul>
             <div id="kotlin-tags"></div>
             <div class="inline-links">
-              <a id="kotlin-link" class="text-link" href="#" target="_blank" rel="noreferrer">Repository ↗</a>
-              <a id="kotlin-live" class="text-link" href="#" target="_blank" rel="noreferrer">Live deployment ↗</a>
+              <a id="kotlin-link" class="text-link" href="#" target="_blank" rel="noreferrer">Explore source code ↗</a>
+              <a id="kotlin-live" class="text-link" href="#" target="_blank" rel="noreferrer">Open live deployment ↗</a>
             </div>
           </div>
           <div class="arch-diagram" aria-label="Spotify integration architecture diagram">
@@ -167,9 +182,9 @@
 
       <div class="jvm-lab">
         <div>
-          <span class="eyebrow">JVM under the hood</span>
+          <span class="eyebrow">Independent research · JVM</span>
           <h3 id="jvm-lab-title"></h3>
-          <a id="jvm-lab-link" class="text-link" href="#" target="_blank" rel="noreferrer">Explore repository ↗</a>
+          <a id="jvm-lab-link" class="text-link" href="#" target="_blank" rel="noreferrer">Explore JVM experiments ↗</a>
         </div>
         <div>
           <p id="jvm-lab-summary"></p>
@@ -182,27 +197,13 @@
   <section id="backend">
     <div class="wrap">
       <div class="section-head">
-        <div class="kicker">Backend specialization</div>
+        <div class="kicker">Backend expertise</div>
         <div>
           <h2>Backend engineering with systems-level depth.</h2>
-          <p class="section-copy">My core work is Java/Kotlin backend engineering: service architecture, integrations, concurrency, cloud delivery and technical leadership. Systems programming and reverse engineering add depth when problems involve performance, runtime behavior, legacy code or difficult failure modes.</p>
+          <p class="section-copy">My core professional work is Java/Kotlin backend engineering: service architecture, integrations, concurrency, cloud delivery and technical leadership. Systems programming and reverse engineering add depth when problems involve performance, runtime behavior, legacy code or difficult failure modes.</p>
         </div>
       </div>
       <div id="capability-grid" class="capability-grid"></div>
-    </div>
-  </section>
-
-  <section id="experience">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="kicker">Professional experience</div>
-        <div>
-          <h2>Architecture, delivery and hands-on technical leadership.</h2>
-          <p class="section-copy">My roles span implementation, system ownership, cross-team delivery and mentoring. I stay close enough to the code to make engineering decisions with real constraints in view.</p>
-        </div>
-      </div>
-      <div id="experience-list" class="experience-list"></div>
-      <article id="impact-story" class="impact-story"></article>
     </div>
   </section>
 
@@ -212,7 +213,7 @@
         <div class="kicker">System design</div>
         <div>
           <h2>Design choices, constraints and trade-offs.</h2>
-          <p class="section-copy">Concrete architecture decisions from public work, including why they were made and what they cost.</p>
+          <p class="section-copy">Concrete architecture decisions from independent public work, showing why the choices were made and what they cost.</p>
         </div>
       </div>
       <div id="decision-grid" class="decision-grid"></div>
@@ -225,7 +226,7 @@
         <div class="kicker">Engineering beyond the JVM</div>
         <div>
           <h2>Native systems, reverse engineering and simulation.</h2>
-          <p class="section-copy">Additional projects explore performance, binary reconstruction, simulation and software below the framework layer. Fall of Nouraajd is featured above because it is a full engineering case study rather than a supporting experiment.</p>
+          <p class="section-copy">Additional independent projects explore performance, binary reconstruction, simulation and software below the framework layer. Fall of Nouraajd is featured above as a full engineering case study.</p>
           <div id="taxonomy" class="taxonomy" aria-label="Project categories"></div>
         </div>
       </div>
