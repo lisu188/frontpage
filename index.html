@@ -3,113 +3,455 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Andrzej Lis — senior and lead-level software engineer focused on JVM backend engineering, cloud systems, native software and evidence-driven reverse engineering.">
-<meta name="theme-color" content="#0b1015">
-<title>Andrzej Lis — Software Engineering</title>
+<meta name="description" content="Andrzej Lis — Lead Software Engineer in Kraków. Java/Kotlin backend, distributed systems, technical leadership, CI/CD and systems engineering.">
+<meta name="theme-color" content="#080b10">
+<meta property="og:title" content="Andrzej Lis — Lead Software Engineer">
+<meta property="og:description" content="12+ years building backend systems, leading engineers and improving delivery. Java, Kotlin, Spring, Kafka and systems engineering.">
+<title>Andrzej Lis — Lead Software Engineer</title>
 <style>
-:root{--bg:#0b1015;--panel:#111820;--panel2:#151e27;--text:#e9eef3;--muted:#97a6b4;--line:#26333f;--accent:#6ee7b7;--accent2:#93c5fd;--max:1180px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0,#122536 0,transparent 34rem),radial-gradient(circle at 0 35%,#10251e 0,transparent 30rem),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}a{color:inherit}.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06)}.brand{font-weight:800;letter-spacing:-.04em;font-size:20px;text-decoration:none}.brand span{color:var(--accent)}.links{display:flex;align-items:center;gap:22px}.links a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:650}.links a:hover{color:var(--text)}.hero{min-height:640px;display:grid;grid-template-columns:1.45fr .75fr;gap:70px;align-items:center;padding:78px 0 88px}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--accent);font-size:13px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.eyebrow:before{content:"";width:24px;height:1px;background:var(--accent)}h1{font-size:clamp(58px,8vw,104px);line-height:.91;letter-spacing:-.07em;margin:20px 0 26px;max-width:850px}.lead{max-width:760px;color:#b8c4cf;font-size:clamp(18px,2.2vw,23px);line-height:1.55}.lead strong{color:var(--text);font-weight:700}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid var(--line);border-radius:999px;padding:12px 18px;text-decoration:none;font-size:14px;font-weight:750;background:rgba(255,255,255,.025)}.btn.primary{background:var(--text);color:#0a0f14;border-color:var(--text)}.btn:hover{transform:translateY(-1px)}.portrait{position:relative;display:flex;justify-content:center}.avatar-shell{width:min(100%,330px);aspect-ratio:1;border:1px solid var(--line);border-radius:32px;padding:12px;background:linear-gradient(145deg,rgba(110,231,183,.14),rgba(147,197,253,.08));box-shadow:0 30px 80px rgba(0,0,0,.3)}.avatar-shell img{width:100%;height:100%;object-fit:cover;border-radius:22px;filter:saturate(.82) contrast(1.03)}.availability{position:absolute;right:0;bottom:18px;background:#0f171e;border:1px solid var(--line);border-radius:14px;padding:10px 13px;font-size:12px;font-weight:700;color:#becbd6}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-right:7px;box-shadow:0 0 16px var(--accent)}section{padding:92px 0;border-top:1px solid rgba(255,255,255,.06)}.section-head{display:grid;grid-template-columns:.7fr 1.4fr;gap:50px;align-items:start;margin-bottom:46px}.kicker{color:var(--muted);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.section-title{font-size:clamp(34px,4.8vw,58px);line-height:1.05;letter-spacing:-.045em;margin:0}.section-copy{color:var(--muted);max-width:760px;font-size:17px;margin-top:16px}.stack{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}.chip{border:1px solid var(--line);border-radius:999px;padding:7px 11px;font-size:12px;color:#c7d1da;background:rgba(255,255,255,.02)}.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{position:relative;min-height:315px;border:1px solid var(--line);border-radius:22px;padding:28px;background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.012));display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;text-decoration:none}.project:before{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:-70px;top:-80px;background:radial-gradient(circle,rgba(110,231,183,.13),transparent 70%)}.project:hover,.mini:hover{border-color:#405261;transform:translateY(-2px)}.project-num{color:var(--muted);font-size:12px;font-weight:800}.project h3{font-size:28px;letter-spacing:-.04em;margin:38px 0 10px}.project p{color:var(--muted);max-width:520px;margin:0}.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}.meta span{font-size:11px;font-weight:750;color:#b8c6d1;border:1px solid var(--line);border-radius:999px;padding:5px 9px}.arrow{position:absolute;right:26px;bottom:25px;font-size:22px;color:var(--accent)}.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.mini{border:1px solid var(--line);border-radius:18px;padding:22px;text-decoration:none;background:rgba(255,255,255,.018)}.mini .type{color:var(--accent2);font-size:11px;font-weight:800;letter-spacing:.09em;text-transform:uppercase}.mini h3{font-size:18px;margin:9px 0 7px}.mini p{color:var(--muted);font-size:13px;margin:0}.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.proof{border-top:1px solid var(--line);padding-top:22px}.proof strong{display:block;font-size:38px;letter-spacing:-.05em;margin-bottom:7px}.proof p{margin:0;color:var(--muted);font-size:14px}.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.principle{border:1px solid var(--line);border-radius:18px;padding:24px;background:rgba(255,255,255,.018)}.principle h3{margin:0 0 9px;font-size:17px}.principle p{margin:0;color:var(--muted);font-size:14px}.career{display:grid;grid-template-columns:1fr 1fr;gap:18px}.career-card{border:1px solid var(--line);border-radius:20px;padding:28px;background:rgba(255,255,255,.02)}.career-card .label{color:var(--accent2);font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.career-card h3{font-size:25px;margin:10px 0 8px;letter-spacing:-.03em}.career-card p{margin:0;color:var(--muted)}.note{margin-top:28px;border-left:2px solid var(--line);padding-left:18px;color:var(--muted);font-size:13px;max-width:900px}.contact{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end}.contact h2{font-size:clamp(42px,6vw,72px);line-height:1;letter-spacing:-.055em;margin:0;max-width:790px}.contact p{color:var(--muted);max-width:660px;font-size:17px}.footer{display:flex;justify-content:space-between;gap:20px;padding:30px 0 45px;color:#758593;font-size:12px;border-top:1px solid rgba(255,255,255,.06)}@media(max-width:860px){.links a:not(.keep){display:none}.hero{grid-template-columns:1fr;min-height:auto;padding:70px 0}.portrait{justify-content:flex-start}.avatar-shell{width:230px}.availability{left:170px;right:auto}.section-head{grid-template-columns:1fr;gap:16px}.projects,.mini-grid,.proof-grid,.principles,.career{grid-template-columns:1fr}.contact{grid-template-columns:1fr}.contact .actions{margin-top:0}}@media(max-width:520px){.wrap{width:min(calc(100% - 26px),var(--max))}.hero{padding-top:52px}.nav{height:66px}h1{font-size:56px}.project{min-height:290px;padding:22px}.availability{position:static;margin-left:12px;align-self:flex-end}.portrait{align-items:flex-end}section{padding:68px 0}.footer{flex-direction:column}}@media(prefers-reduced-motion:no-preference){.project,.mini,.btn{transition:.18s ease}}
+:root{
+  --bg:#080b10;
+  --bg-soft:#0d1118;
+  --panel:#111722;
+  --panel-2:#151d29;
+  --text:#f3f6f8;
+  --muted:#94a3b8;
+  --muted-2:#6f7f93;
+  --line:rgba(255,255,255,.09);
+  --line-strong:rgba(255,255,255,.15);
+  --green:#8ff0c8;
+  --blue:#9ac4ff;
+  --violet:#c2b3ff;
+  --max:1180px;
+  --radius:24px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--text);
+  background:
+    radial-gradient(900px 520px at 85% -5%,rgba(79,132,255,.13),transparent 60%),
+    radial-gradient(780px 520px at -10% 28%,rgba(70,224,167,.10),transparent 58%),
+    var(--bg);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
+.nav{
+  position:sticky;top:0;z-index:20;
+  display:flex;align-items:center;justify-content:space-between;
+  height:74px;
+  background:rgba(8,11,16,.72);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%}
+.brand{font-weight:850;letter-spacing:-.04em;text-decoration:none;font-size:19px}
+.brand span{color:var(--green)}
+.nav-links{display:flex;align-items:center;gap:22px}
+.nav-links a{font-size:13px;font-weight:720;text-decoration:none;color:var(--muted)}
+.nav-links a:hover{color:var(--text)}
+.hero{
+  min-height:700px;
+  display:grid;
+  grid-template-columns:minmax(0,1.45fr) minmax(290px,.55fr);
+  gap:72px;
+  align-items:center;
+  padding:88px 0 96px;
+}
+.badge{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:8px 12px;border:1px solid var(--line);border-radius:999px;
+  color:#c8d4df;background:rgba(255,255,255,.025);
+  font-size:12px;font-weight:800;letter-spacing:.04em;
+}
+.badge i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 18px rgba(143,240,200,.7)}
+h1{
+  margin:24px 0 24px;
+  font-size:clamp(62px,8vw,108px);
+  line-height:.89;
+  letter-spacing:-.075em;
+  max-width:880px;
+}
+h1 .accent{display:block;color:var(--green)}
+.hero-copy{
+  max-width:770px;
+  color:#b2bfcc;
+  font-size:clamp(18px,2vw,22px);
+}
+.hero-copy strong{color:var(--text);font-weight:760}
+.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:34px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:44px;padding:0 17px;border:1px solid var(--line-strong);
+  border-radius:999px;text-decoration:none;font-size:13px;font-weight:800;
+  background:rgba(255,255,255,.025);
+}
+.btn.primary{background:var(--text);color:#0a0e14;border-color:var(--text)}
+.btn:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.26)}
+.hero-side{display:flex;flex-direction:column;gap:14px}
+.portrait{
+  border:1px solid var(--line);border-radius:30px;padding:10px;
+  background:linear-gradient(145deg,rgba(143,240,200,.10),rgba(154,196,255,.08));
+  box-shadow:0 35px 90px rgba(0,0,0,.34);
+}
+.portrait img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:22px;filter:saturate(.84) contrast(1.04)}
+.signal{
+  border:1px solid var(--line);border-radius:18px;padding:16px 17px;
+  background:rgba(255,255,255,.024)
+}
+.signal-label{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted-2);font-weight:850}
+.signal strong{display:block;margin-top:6px;font-size:15px}
+.signal p{margin:4px 0 0;color:var(--muted);font-size:12px}
+.metrics{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
+  padding-bottom:92px;
+}
+.metric{
+  border:1px solid var(--line);border-radius:18px;padding:22px 20px;
+  background:linear-gradient(180deg,rgba(255,255,255,.028),rgba(255,255,255,.012));
+}
+.metric strong{display:block;font-size:36px;line-height:1;letter-spacing:-.055em}
+.metric span{display:block;margin-top:9px;color:var(--muted);font-size:12px}
+section{padding:96px 0;border-top:1px solid var(--line)}
+.section-head{
+  display:grid;grid-template-columns:.55fr 1.35fr;gap:54px;
+  align-items:start;margin-bottom:44px
+}
+.kicker{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--green);font-weight:850}
+h2{margin:0;font-size:clamp(38px,5vw,61px);line-height:1.02;letter-spacing:-.05em}
+.section-copy{max-width:760px;margin:16px 0 0;color:var(--muted);font-size:16px}
+.experience{display:grid;gap:14px}
+.role{
+  display:grid;grid-template-columns:190px 1fr auto;gap:28px;align-items:start;
+  padding:28px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.018)
+}
+.role-period{color:var(--muted-2);font-size:12px;font-weight:780;padding-top:5px}
+.role h3{margin:0;font-size:24px;letter-spacing:-.03em}
+.role-company{margin-top:4px;color:var(--blue);font-size:13px;font-weight:760}
+.role p{margin:13px 0 0;color:var(--muted);max-width:760px}
+.role-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:17px}
+.tag{padding:5px 9px;border:1px solid var(--line);border-radius:999px;color:#b7c4d1;font-size:10px;font-weight:760}
+.role-mark{font-size:20px;color:var(--green)}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.project{
+  position:relative;min-height:315px;padding:28px;border:1px solid var(--line);
+  border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.012));
+  overflow:hidden;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between
+}
+.project:after{
+  content:"";position:absolute;width:240px;height:240px;right:-100px;top:-100px;border-radius:50%;
+  background:radial-gradient(circle,rgba(143,240,200,.12),transparent 68%)
+}
+.project:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.22)}
+.project-index{font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted-2);font-weight:850}
+.project h3{font-size:29px;letter-spacing:-.04em;margin:40px 0 10px}
+.project p{margin:0;color:var(--muted);max-width:520px}
+.project .arrow{position:absolute;right:26px;bottom:24px;font-size:20px;color:var(--green)}
+.project .role-tags{padding-right:30px}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.skill-card{border:1px solid var(--line);border-radius:20px;padding:23px;background:rgba(255,255,255,.018)}
+.skill-card h3{margin:0 0 14px;font-size:16px}
+.skill-list{display:flex;gap:7px;flex-wrap:wrap}
+.skill-list span{font-size:11px;color:#c5d0da;background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:999px;padding:6px 9px}
+.leadership{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:15px
+}
+.lead-card{border-top:1px solid var(--line-strong);padding:20px 4px 0}
+.lead-card strong{font-size:18px;letter-spacing:-.02em}
+.lead-card p{margin:7px 0 0;color:var(--muted);font-size:13px}
+.profile-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
+.profile-card{border:1px solid var(--line);border-radius:22px;padding:27px;background:rgba(255,255,255,.018)}
+.profile-card h3{margin:0 0 12px;font-size:20px}
+.profile-card p{margin:0;color:var(--muted)}
+.education-row{display:flex;justify-content:space-between;gap:18px;margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+.education-row strong{font-size:14px}
+.education-row span{color:var(--muted-2);font-size:12px;white-space:nowrap}
+.contact{
+  display:grid;grid-template-columns:1fr auto;gap:28px;align-items:end
+}
+.contact h2{max-width:850px}
+.contact p{max-width:690px;color:var(--muted);font-size:16px}
+.footer{display:flex;justify-content:space-between;gap:20px;padding:30px 0 44px;color:var(--muted-2);font-size:11px;border-top:1px solid var(--line)}
+@media(max-width:900px){
+  .nav-links a:not(.keep){display:none}
+  .hero{grid-template-columns:1fr;gap:36px;min-height:auto;padding-top:70px}
+  .hero-side{max-width:360px}
+  .metrics{grid-template-columns:repeat(2,1fr)}
+  .section-head{grid-template-columns:1fr;gap:14px}
+  .role{grid-template-columns:1fr}
+  .role-mark{display:none}
+  .projects,.skills-grid,.leadership,.profile-grid{grid-template-columns:1fr}
+  .contact{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .wrap{width:min(calc(100% - 26px),var(--max))}
+  .nav{height:66px}
+  h1{font-size:56px}
+  .hero{padding:58px 0 66px}
+  .metrics{grid-template-columns:1fr 1fr;padding-bottom:70px}
+  .metric{padding:18px 16px}
+  .metric strong{font-size:31px}
+  section{padding:72px 0}
+  .project{min-height:290px;padding:22px}
+  .role{padding:22px}
+  .footer{flex-direction:column}
+}
+@media(prefers-reduced-motion:no-preference){
+  .btn,.project{transition:.18s ease}
+}
 </style>
 </head>
 <body>
-<header class="wrap nav">
-<a class="brand" href="#top">Andrzej Lis<span>.</span></a>
-<nav class="links" aria-label="Main navigation">
-<a href="#work">Work</a>
-<a href="#more">More</a>
-<a href="#engineering">Engineering</a>
-<a href="#profile">Profile</a>
-<a class="keep" href="https://github.com/lisu188" target="_blank" rel="noreferrer">GitHub ↗</a>
-</nav>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">Andrzej Lis<span>.</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#profile">Profile</a>
+      <a class="keep" href="https://github.com/lisu188" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </nav>
+  </div>
 </header>
+
 <main id="top">
-<div class="wrap hero">
-<div>
-<div class="eyebrow">Senior / Lead-level Software Engineering · Kraków</div>
-<h1>Backend depth. Systems range.</h1>
-<p class="lead">I build software where <strong>architecture, correctness and maintainability</strong> matter: JVM backend and cloud systems, concurrent applications, native performance work and evidence-driven reverse engineering.</p>
-<div class="actions">
-<a class="btn primary" href="#work">Selected work</a>
-<a class="btn" href="https://www.linkedin.com/in/andrzej-lis-1b4830a6/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-<a class="btn" href="https://github.com/lisu188" target="_blank" rel="noreferrer">GitHub ↗</a>
-</div>
-</div>
-<div class="portrait">
-<div class="avatar-shell"><img src="https://avatars.githubusercontent.com/u/7967861?v=4" alt="Andrzej Lis"></div>
-<div class="availability"><span class="dot"></span>JVM · architecture · systems</div>
-</div>
-</div>
-<section id="work">
-<div class="wrap">
-<div class="section-head">
-<div class="kicker">Selected work</div>
-<div><h2 class="section-title">A portfolio optimized for engineering signal.</h2><p class="section-copy">The projects below lead with backend and cloud engineering, then show systems breadth through native code, game technology and reverse engineering.</p></div>
-</div>
-<div class="projects">
-<a class="project" href="https://github.com/lisu188/winrisk" target="_blank" rel="noreferrer"><div><span class="project-num">01 · JVM / FULL STACK</span><h3>WinRisk</h3><p>A Java strategy-game engine evolved into a concurrent Spring Boot service with REST commands, STOMP/WebSocket state updates, a React + TypeScript client, deterministic headless simulation and CI/coverage gates.</p><div class="meta"><span>Java</span><span>Spring Boot</span><span>React</span><span>TypeScript</span><span>WebSocket</span></div></div><span class="arrow">↗</span></a>
-<a class="project" href="https://github.com/lisu188/spotify-web-api-demo" target="_blank" rel="noreferrer"><div><span class="project-num">02 · BACKEND / CLOUD</span><h3>Spotify Web API Demo</h3><p>A Kotlin/Spring service integrating Spotify and Last.fm with OAuth, asynchronous jobs, Firestore persistence, Secret Manager, Cloud Run deployment and optional AI-assisted lyric classification.</p><div class="meta"><span>Kotlin</span><span>Spring</span><span>Java 21</span><span>GCP</span><span>Firestore</span><span>Docker</span></div></div><span class="arrow">↗</span></a>
-<a class="project" href="https://github.com/lisu188/fall-of-nouraajd" target="_blank" rel="noreferrer"><div><span class="project-num">03 · GAME / SYSTEMS</span><h3>Fall of Nouraajd</h3><p>A dark-fantasy 2D game combining a C++ engine with Python, SDL2 and pybind11, backed by headless automation, content validation, performance checks and an MCP engine surface.</p><div class="meta"><span>C++</span><span>Python</span><span>SDL2</span><span>pybind11</span><span>CMake</span></div></div><span class="arrow">↗</span></a>
-<a class="project" href="https://github.com/lisu188/clife" target="_blank" rel="noreferrer"><div><span class="project-num">04 · NATIVE PERFORMANCE</span><h3>CLife</h3><p>A C++23/X11 cellular-automata implementation with packed simulation, live Life-like rules, correctness checks and reproducible headless benchmarks.</p><div class="meta"><span>C++23</span><span>X11/XShm</span><span>Performance</span><span>Benchmarks</span></div></div><span class="arrow">↗</span></a>
-<a class="project" href="https://github.com/lisu188/clash-disassembly" target="_blank" rel="noreferrer"><div><span class="project-num">05 · REVERSE ENGINEERING</span><h3>Clash Disassembly</h3><p>Evidence-driven reconstruction of a Win95 game binary: recovered behavior, subsystem boundaries, reproducible campaign validation and a modern C17/SDL implementation.</p><div class="meta"><span>Assembly</span><span>C17</span><span>SDL</span><span>Reverse engineering</span></div></div><span class="arrow">↗</span></a>
-<a class="project" href="https://github.com/lisu188/clash-save-editor" target="_blank" rel="noreferrer"><div><span class="project-num">06 · JVM / BINARY TOOLING</span><h3>Clash Save Editor</h3><p>A Kotlin/JVM desktop tool for inspecting and editing binary save structures, with schema-oriented parsing and an MCP server for structured, explicit modifications.</p><div class="meta"><span>Kotlin</span><span>JVM</span><span>Binary formats</span><span>MCP</span><span>Reverse engineering</span></div></div><span class="arrow">↗</span></a>
-</div>
-</div>
-</section>
-<section id="more">
-<div class="wrap">
-<div class="section-head">
-<div class="kicker">Additional engineering</div>
-<div><h2 class="section-title">Useful depth without pretending every repository is a flagship.</h2><p class="section-copy">Older experiments, libraries, reconstructions and smaller projects are kept public when they add technical context. Their READMEs now state scope and provenance more explicitly.</p></div>
-</div>
-<div class="mini-grid">
-<a class="mini" href="https://github.com/lisu188/jexperiments" target="_blank" rel="noreferrer"><div class="type">JVM laboratory</div><h3>jexperiments</h3><p>20+ focused Java/Kotlin modules covering bytecode, language internals, concurrency and runtime experiments.</p></a>
-<a class="mini" href="https://github.com/lisu188/vstd" target="_blank" rel="noreferrer"><div class="type">C++ library</div><h3>vstd</h3><p>Header-oriented C++ utilities for futures, threading, traits, reflection, logging and reusable low-level helpers.</p></a>
-<a class="mini" href="https://github.com/lisu188/clash-hd" target="_blank" rel="noreferrer"><div class="type">Binary patching</div><h3>Clash95 HD</h3><p>Windows binary-patching work with byte verification, debugger probes and explicit runtime/visual evidence.</p></a>
-<a class="mini" href="https://github.com/lisu188/lezac" target="_blank" rel="noreferrer"><div class="type">Software archaeology</div><h3>Larax &amp; Zaco reconstruction</h3><p>C++ recovery work around a 1996 DOS game; the repository now documents the original shareware provenance separately from the reconstruction.</p></a>
-<a class="mini" href="https://github.com/lisu188/boid3d" target="_blank" rel="noreferrer"><div class="type">Simulation</div><h3>Boid3D</h3><p>Godot 4 flocking simulation with cohesion, alignment, separation and spatial-neighbour optimization.</p></a>
-<a class="mini" href="https://github.com/lisu188/dungeon" target="_blank" rel="noreferrer"><div class="type">Attributed port</div><h3>Dungeon generator</h3><p>Kotlin port and modernization of the donjon/drow dungeon-generation algorithm, with source attribution and licensing called out explicitly.</p></a>
-</div>
-<div class="note">Public forks and tutorial-derived repositories are intentionally not presented as portfolio work. Reconstruction and port repositories distinguish original software or algorithms from my own implementation work.</div>
-</div>
-</section>
-<section id="engineering">
-<div class="wrap">
-<div class="section-head">
-<div class="kicker">Engineering</div>
-<div><h2 class="section-title">A backend engineer with a systems mindset.</h2><p class="section-copy">My core axis is JVM/backend engineering and technical leadership. The public work adds breadth that is useful in senior roles: concurrency, cloud delivery, native code, legacy systems, binary behavior, test infrastructure and long-lived codebases.</p><div class="stack"><span class="chip">Kotlin</span><span class="chip">Java</span><span class="chip">JVM</span><span class="chip">Spring</span><span class="chip">GCP</span><span class="chip">C++</span><span class="chip">C</span><span class="chip">Python</span><span class="chip">CMake</span><span class="chip">Reverse engineering</span><span class="chip">CI / testing</span><span class="chip">Architecture</span></div></div>
-</div>
-<div class="proof-grid">
-<div class="proof"><strong>20+</strong><p>focused JVM experiment modules spanning bytecode, Kotlin/JVM behavior, concurrency and runtime mechanics.</p></div>
-<div class="proof"><strong>Backend → native</strong><p>public work ranges from Spring/GCP services to C++23 performance work and C/assembly recovery.</p></div>
-<div class="proof"><strong>Tests first</strong><p>headless simulations, correctness checks, coverage gates and reproducible benchmarks appear across the strongest projects.</p></div>
-</div>
-<div class="principles" style="margin-top:54px">
-<div class="principle"><h3>Evidence over assumptions</h3><p>Measure and reproduce behavior before changing it, whether debugging a service, tuning native code or recovering legacy software.</p></div>
-<div class="principle"><h3>Architecture that survives change</h3><p>Prefer clear boundaries, replaceable components and boring interfaces over clever coupling that becomes expensive later.</p></div>
-<div class="principle"><h3>Tests as engineering infrastructure</h3><p>Use focused tests, end-to-end validation and performance guards to make ambitious refactoring possible without guessing.</p></div>
-</div>
-</div>
-</section>
-<section id="profile">
-<div class="wrap">
-<div class="section-head">
-<div class="kicker">Profile</div>
-<div><h2 class="section-title">Professional backend engineering, backed by curiosity that goes all the way down.</h2><p class="section-copy">Based in Kraków. My strongest professional signal is Java/Kotlin backend engineering and technical leadership; independent work extends that into systems programming, games, binary formats and software archaeology.</p></div>
-</div>
-<div class="career">
-<div class="career-card"><div class="label">Backend</div><h3>Java · Kotlin · Spring</h3><p>Service architecture, concurrency, APIs, persistence, integrations and production-oriented JVM engineering.</p></div>
-<div class="career-card"><div class="label">Cloud</div><h3>GCP and delivery</h3><p>Containerized services, Cloud Run, Firestore, Secret Manager, CI pipelines and deployment-aware application design.</p></div>
-<div class="career-card"><div class="label">Leadership</div><h3>Architecture · delivery · mentoring</h3><p>Work at the boundary between implementation and engineering direction: design, delivery, code quality and technical guidance.</p></div>
-<div class="career-card"><div class="label">Systems</div><h3>C++ · C · reverse engineering</h3><p>Native performance work, game technology, binary formats and legacy behavior recovery as a complement to backend specialization.</p></div>
-</div>
-</div>
-</section>
-<section>
-<div class="wrap contact">
-<div><div class="kicker" style="margin-bottom:18px">Contact</div><h2>Interested in difficult software problems.</h2><p>The repositories provide the technical evidence. LinkedIn is the best route for professional contact.</p></div>
-<div class="actions"><a class="btn primary" href="https://www.linkedin.com/in/andrzej-lis-1b4830a6/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a class="btn" href="https://github.com/lisu188" target="_blank" rel="noreferrer">GitHub ↗</a></div>
-</div>
-</section>
+  <div class="wrap hero">
+    <div>
+      <div class="badge"><i></i> Lead Software Engineer · Kraków, Poland</div>
+      <h1>Backend systems.<span class="accent">Engineering leadership.</span></h1>
+      <p class="hero-copy">
+        I am a <strong>hands-on software engineer with 12+ years of experience</strong> building enterprise backend systems,
+        leading engineers and improving delivery. My core stack is Java/Kotlin, Spring, messaging and data-intensive systems.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#experience">View experience</a>
+        <a class="btn" href="https://www.linkedin.com/in/andrzej-lis-1b4830a6/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a class="btn" href="mailto:andrzej.lis3@gmail.com">Email</a>
+      </div>
+    </div>
+
+    <aside class="hero-side" aria-label="Profile summary">
+      <div class="portrait">
+        <img src="https://avatars.githubusercontent.com/u/7967861?v=4" alt="Andrzej Lis">
+      </div>
+      <div class="signal">
+        <div class="signal-label">Primary focus</div>
+        <strong>Java · Kotlin · Backend</strong>
+        <p>Spring, Kafka/JMS, SQL/NoSQL, CI/CD</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="wrap metrics" aria-label="Career highlights">
+    <div class="metric"><strong>12+</strong><span>years in software engineering</span></div>
+    <div class="metric"><strong>~15</strong><span>people managed in a unit</span></div>
+    <div class="metric"><strong>~8</strong><span>engineers under technical leadership</span></div>
+    <div class="metric"><strong>4×</strong><span>faster CI/CD: ~2h → ~30m</span></div>
+  </div>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Experience</div>
+        <div>
+          <h2>Enterprise systems, delivery ownership and technical leadership.</h2>
+          <p class="section-copy">
+            Career progression from software engineering through team leadership and Scrum facilitation to lead-level delivery and resource management.
+          </p>
+        </div>
+      </div>
+
+      <div class="experience">
+        <article class="role">
+          <div class="role-period">Aug 2020 — Present</div>
+          <div>
+            <h3>Lead Software Engineer / Resource Manager</h3>
+            <div class="role-company">EPAM Systems · client: Google / Google Fiber</div>
+            <p>Feature design and implementation in a large internal codebase, delivery tracking, stakeholder communication, coaching and staffing coordination across the engagement.</p>
+            <div class="role-tags"><span class="tag">Java 8</span><span class="tag">Google Fiber</span><span class="tag">Technical leadership</span><span class="tag">Staffing</span></div>
+          </div>
+          <div class="role-mark">01</div>
+        </article>
+
+        <article class="role">
+          <div class="role-period">Jan 2019 — Jul 2020</div>
+          <div>
+            <h3>Team Leader / Scrum Master / Software Engineer</h3>
+            <div class="role-company">Sabre · Crew Manager</div>
+            <p>Designed a Kafka-connected training microservice, delivered backend features, coordinated work across Scrum teams and mentored engineers while keeping delivery predictable.</p>
+            <div class="role-tags"><span class="tag">Java 8</span><span class="tag">Spring Boot</span><span class="tag">Kafka</span><span class="tag">Oracle</span><span class="tag">MongoDB</span></div>
+          </div>
+          <div class="role-mark">02</div>
+        </article>
+
+        <article class="role">
+          <div class="role-period">Feb 2017 — Dec 2018</div>
+          <div>
+            <h3>Software Engineer</h3>
+            <div class="role-company">j-labs · client: Sabre / Crew Manager</div>
+            <p>Built backend functionality around Spring and JMS, supported teammates technically and led CI/CD improvements that reduced build time from roughly two hours to thirty minutes.</p>
+            <div class="role-tags"><span class="tag">Spring</span><span class="tag">Hibernate</span><span class="tag">JMS</span><span class="tag">ActiveMQ</span><span class="tag">TeamCity</span></div>
+          </div>
+          <div class="role-mark">03</div>
+        </article>
+
+        <article class="role">
+          <div class="role-period">2013 — 2017</div>
+          <div>
+            <h3>Software Engineer</h3>
+            <div class="role-company">j-labs / Sabre · Motorola Solutions</div>
+            <p>Worked across legacy airline systems, Java/JEE backend services and JavaScript UI integration; owned an ESB component, migrated SVN repositories to Git and delivered JMS/WebSocket integrations.</p>
+            <div class="role-tags"><span class="tag">Java 5–7</span><span class="tag">C++11</span><span class="tag">WebLogic</span><span class="tag">WebSocket</span><span class="tag">PostgreSQL</span></div>
+          </div>
+          <div class="role-mark">04</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Selected work</div>
+        <div>
+          <h2>Side projects that show engineering range.</h2>
+          <p class="section-copy">
+            Beyond enterprise JVM work, I maintain projects spanning cloud integration, native performance, game systems and reverse engineering.
+          </p>
+        </div>
+      </div>
+
+      <div class="projects">
+        <a class="project" href="https://github.com/lisu188/winrisk" target="_blank" rel="noreferrer">
+          <div>
+            <div class="project-index">01 · JVM / Full stack</div>
+            <h3>WinRisk</h3>
+            <p>Concurrent Java strategy-game engine evolved into a Spring Boot service with REST commands, WebSocket state updates and a React/TypeScript client.</p>
+            <div class="role-tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">React</span><span class="tag">WebSocket</span></div>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+
+        <a class="project" href="https://github.com/lisu188/spotify-web-api-demo" target="_blank" rel="noreferrer">
+          <div>
+            <div class="project-index">02 · Backend / Cloud</div>
+            <h3>Spotify Web API Demo</h3>
+            <p>Kotlin/Spring integration service using OAuth, asynchronous jobs, Firestore, Secret Manager, Cloud Run and Docker.</p>
+            <div class="role-tags"><span class="tag">Kotlin</span><span class="tag">Spring</span><span class="tag">GCP</span><span class="tag">Firestore</span></div>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+
+        <a class="project" href="https://github.com/lisu188/fall-of-nouraajd" target="_blank" rel="noreferrer">
+          <div>
+            <div class="project-index">03 · Game / Systems</div>
+            <h3>Fall of Nouraajd</h3>
+            <p>Dark-fantasy 2D game combining a C++ engine with Python, SDL2 and pybind11, supported by headless automation and validation tooling.</p>
+            <div class="role-tags"><span class="tag">C++</span><span class="tag">Python</span><span class="tag">SDL2</span><span class="tag">pybind11</span></div>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+
+        <a class="project" href="https://github.com/lisu188/clash-disassembly" target="_blank" rel="noreferrer">
+          <div>
+            <div class="project-index">04 · Reverse engineering</div>
+            <h3>Clash Disassembly</h3>
+            <p>Evidence-driven reconstruction of a Win95 game binary, recovered subsystem behavior and a modern implementation path.</p>
+            <div class="role-tags"><span class="tag">Assembly</span><span class="tag">C</span><span class="tag">Reverse engineering</span><span class="tag">SDL</span></div>
+          </div>
+          <span class="arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Capabilities</div>
+        <div>
+          <h2>Backend first. Broad enough to own the system around it.</h2>
+          <p class="section-copy">
+            The strongest signal is JVM backend engineering, supported by messaging, databases, delivery tooling and hands-on technical leadership.
+          </p>
+        </div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Languages & backend</h3>
+          <div class="skill-list"><span>Java</span><span>Kotlin</span><span>C++11</span><span>Spring Boot</span><span>Spring Framework</span><span>Hibernate</span></div>
+        </div>
+        <div class="skill-card">
+          <h3>Messaging & data</h3>
+          <div class="skill-list"><span>Kafka</span><span>JMS / ActiveMQ</span><span>WebSocket</span><span>Oracle</span><span>MongoDB</span><span>PostgreSQL</span></div>
+        </div>
+        <div class="skill-card">
+          <h3>Delivery & engineering</h3>
+          <div class="skill-list"><span>Maven</span><span>Gradle</span><span>TeamCity</span><span>Jenkins</span><span>Git</span><span>CI/CD</span></div>
+        </div>
+      </div>
+
+      <div class="leadership">
+        <div class="lead-card"><strong>Technical leadership</strong><p>Design guidance, code quality, mentoring and coordination across engineers and teams.</p></div>
+        <div class="lead-card"><strong>Delivery ownership</strong><p>Planning, progress tracking, risk communication and predictable execution in Scrum environments.</p></div>
+        <div class="lead-card"><strong>Resource management</strong><p>Staffing coordination, performance feedback and professional development support.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="profile">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Profile</div>
+        <div>
+          <h2>Hands-on engineering with leadership context.</h2>
+          <p class="section-copy">
+            I work best where architecture and delivery meet: close enough to the code to make strong technical decisions, with enough ownership to improve how the team ships.
+          </p>
+        </div>
+      </div>
+
+      <div class="profile-grid">
+        <div class="profile-card">
+          <h3>Education</h3>
+          <p>Computer Science, AGH University of Krakow. Engineering thesis on user identification based on signature dynamics.</p>
+          <div class="education-row"><strong>B.Eng. (Engineer), Computer Science</strong><span>2014 — 2019</span></div>
+        </div>
+        <div class="profile-card">
+          <h3>Public profile</h3>
+          <p>Based in Kraków. Public work spans backend engineering, cloud integrations, systems programming, game technology and reverse engineering.</p>
+          <div class="actions">
+            <a class="btn" href="https://www.linkedin.com/in/andrzej-lis-1b4830a6/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a class="btn" href="https://github.com/lisu188" target="_blank" rel="noreferrer">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div>
+        <div class="kicker">Contact</div>
+        <h2>Looking for senior or lead-level backend work?</h2>
+        <p>Java/Kotlin backend, system design, delivery ownership and hands-on technical leadership.</p>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="mailto:andrzej.lis3@gmail.com">andrzej.lis3@gmail.com</a>
+      </div>
+    </div>
+  </section>
 </main>
-<footer class="wrap footer"><span>Andrzej Lis · Kraków, Poland</span><span>JVM backend · cloud · systems</span></footer>
+
+<footer class="wrap footer">
+  <span>© 2026 Andrzej Lis</span>
+  <span>Lead Software Engineer · Kraków</span>
+</footer>
 </body>
 </html>
