@@ -10,12 +10,12 @@ window.PORTFOLIO_DATA = {
     cv: "assets/Andrzej-Lis-CV.pdf",
     avatar: "https://avatars.githubusercontent.com/u/7967861?v=4",
     years: "12+",
-    summary: "Senior software engineer focused on JVM backend architecture, cloud systems and technical leadership. My work spans production Java/Kotlin services, concurrency and distributed systems, with hands-on depth in C++, performance engineering, game technology and reverse engineering."
+    summary: "Senior software engineer focused on JVM backend architecture, cloud systems and technical leadership. My professional work spans production Java/Kotlin services, concurrency and distributed systems; independent engineering adds hands-on depth in C++, performance engineering, game technology and reverse engineering."
   },
   heroSignals: [
     { value: "12+", label: "years building production software" },
     { value: "Java / Kotlin", label: "primary backend specialization" },
-    { value: "C++ / Python", label: "custom engine and automated gameplay" },
+    { value: "C++ / Python", label: "independent systems engineering" },
     { value: "2h → 30m", label: "CI/CD build-time improvement" }
   ],
   capabilities: [
@@ -50,7 +50,7 @@ window.PORTFOLIO_DATA = {
   flagship: {
     name: "WinRisk",
     repo: "https://github.com/lisu188/winrisk",
-    eyebrow: "Java backend architecture",
+    eyebrow: "Independent engineering · Java backend",
     summary: "Modernized a Java strategy-game engine into a concurrent Spring Boot application with REST command handling, real-time WebSocket state updates and a React/TypeScript client. The same engine supports deterministic headless simulation, automated testing and CI quality gates.",
     decisions: [
       "Keep the Java game engine independent from the web layer.",
@@ -59,7 +59,7 @@ window.PORTFOLIO_DATA = {
       "Package backend and React client into one deployable Spring Boot artifact."
     ],
     quality: ["JUnit", "integration tests", "JaCoCo gate", "CI smoke test", "deterministic simulations"],
-    tags: ["Java", "Spring Boot", "REST", "STOMP/WebSocket", "Concurrency", "Gradle"]
+    tags: ["Java", "Spring Boot", "WebSocket", "Concurrency", "Gradle"]
   },
   nouraajdCase: {
     name: "Fall of Nouraajd",
@@ -67,7 +67,7 @@ window.PORTFOLIO_DATA = {
     walkthrough: "https://raw.githubusercontent.com/lisu188/fall-of-nouraajd/main/screenshots/nouraajd-walkthrough.mp4",
     image: "https://raw.githubusercontent.com/lisu188/fall-of-nouraajd/main/screenshots/nouraajd-walkthrough-poster.png",
     imageAlt: "Fall of Nouraajd automated campaign walkthrough",
-    eyebrow: "Systems engineering · custom game engine",
+    eyebrow: "Independent engineering · Systems / custom engine",
     summary: "I’m building a dark-fantasy RPG on a custom C++ engine with a Python gameplay layer, SDL2 rendering and pybind11 bindings. The same architecture supports interactive play, headless execution, automated full-campaign walkthroughs, deterministic diagnostics and CI-enforced validation.",
     proofs: [
       { label: "Custom engine", value: "C++ · SDL2 · Python · pybind11" },
@@ -75,12 +75,12 @@ window.PORTFOLIO_DATA = {
       { label: "Verification", value: "90% eligible-line coverage gate" },
       { label: "Tooling", value: "MCP engine API · deterministic playtest traces" }
     ],
-    tags: ["C++", "Python", "SDL2", "pybind11", "CMake", "Linux + Windows"]
+    tags: ["C++", "Python", "SDL2", "pybind11", "Linux + Windows"]
   },
   kotlinCase: {
     name: "Spotify Web API Demo",
     repo: "https://github.com/lisu188/spotify-web-api-demo",
-    eyebrow: "Kotlin / cloud backend",
+    eyebrow: "Independent engineering · Kotlin / cloud",
     summary: "Built a Kotlin/Spring backend that combines Spotify and Last.fm data through OAuth integrations and asynchronous processing. It runs on GCP with Cloud Run, Firestore and Secret Manager, with optional AI-assisted music classification.",
     decisions: [
       "Cloud Run for a simple stateless HTTP deployment surface.",
@@ -88,13 +88,13 @@ window.PORTFOLIO_DATA = {
       "Secret Manager and Application Default Credentials instead of shipping service-account keys.",
       "Bounded background parallelism and explicit caching choices for external API workloads."
     ],
-    tags: ["Kotlin", "Spring Boot", "Java 21", "GCP", "Cloud Run", "Firestore", "Docker"]
+    tags: ["Kotlin", "Spring Boot", "GCP", "Cloud Run", "Firestore"]
   },
   jvmLab: {
     name: "JVM Experiments",
     repo: "https://github.com/lisu188/jexperiments",
     summary: "20+ focused Java and Kotlin experiments exploring bytecode, concurrency, JVM behavior and language/runtime internals.",
-    topics: ["Kotlin suspend state machines", "value-class boxing", "Kotlin metadata", "Java lambda bytecode", "CompletableFuture", "Flow.Publisher", "thread pools", "BCEL"]
+    topics: ["Kotlin suspend state machines", "value-class boxing", "Java lambda bytecode", "CompletableFuture", "BCEL"]
   },
   experience: [
     {
@@ -103,7 +103,8 @@ window.PORTFOLIO_DATA = {
       company: "EPAM Systems · client: Google / Google Fiber",
       technical: "Design and implement features in a large internal Java codebase for Google Fiber, working directly with the client technical lead and stakeholders on architecture, delivery risks and outcomes.",
       secondary: "Lead a small delivery team while supporting staffing, feedback and engineer development across the engagement.",
-      stack: ["Java 8", "large-scale codebase", "feature design", "delivery ownership"]
+      ownership: ["Feature architecture", "Implementation", "Delivery ownership", "Mentoring"],
+      technology: ["Java 8", "Large-scale backend"]
     },
     {
       period: "Jan 2019 — Jul 2020",
@@ -111,7 +112,8 @@ window.PORTFOLIO_DATA = {
       company: "Sabre · Crew Manager",
       technical: "Designed and developed a training module as a microservice with Kafka-based communication and delivered automated duty-assignment backend features.",
       secondary: "Provided technical guidance, coordinated across teams and mentored engineers.",
-      stack: ["Java 8", "Spring Boot", "Kafka", "Oracle", "MongoDB"]
+      ownership: ["Microservice design", "Cross-team delivery", "Technical guidance", "Mentoring"],
+      technology: ["Java 8", "Spring Boot", "Kafka", "Oracle", "MongoDB"]
     },
     {
       period: "Feb 2017 — Dec 2018",
@@ -119,7 +121,8 @@ window.PORTFOLIO_DATA = {
       company: "j-labs · client: Sabre / Crew Manager",
       technical: "Delivered Spring/JMS backend functionality, including forwarding database transaction snapshots as JMS messages. Built internal tooling for build monitoring and failure diagnostics.",
       secondary: "Led CI/CD improvements that reduced build time from about two hours to about thirty minutes.",
-      stack: ["Java 8", "Spring", "Hibernate", "JMS / ActiveMQ", "TeamCity"]
+      ownership: ["Backend integration", "CI/CD", "Build diagnostics", "Delivery improvement"],
+      technology: ["Java 8", "Spring", "Hibernate", "JMS / ActiveMQ", "TeamCity"]
     },
     {
       period: "Apr 2015 — Jan 2017",
@@ -127,7 +130,8 @@ window.PORTFOLIO_DATA = {
       company: "j-labs · client: Sabre / AirCrews",
       technical: "Worked on a legacy Java/C++ airline crewing system, implemented APIS format extensions and became technical owner of an ESB component.",
       secondary: "Migrated repositories from SVN to Git and supported adoption within the team.",
-      stack: ["Java 5–7", "C++11", "WebLogic", "Oracle", "Git"]
+      ownership: ["Legacy modernization", "ESB ownership", "Repository migration"],
+      technology: ["Java 5–7", "C++11", "WebLogic", "Oracle"]
     },
     {
       period: "Aug 2013 — Mar 2015",
@@ -135,7 +139,8 @@ window.PORTFOLIO_DATA = {
       company: "Motorola Solutions · Unified Event Manager",
       technical: "Implemented product features across Java/JEE backend and UI components, ported a Java WebStart UI from Unix to Windows and implemented JMS/WebSocket communication between JavaScript and Java services.",
       secondary: "Contributed to a structured network-infrastructure backend view.",
-      stack: ["Java 7", "Java/JEE", "JMS", "WebSocket", "PostgreSQL"]
+      ownership: ["Backend & UI delivery", "Platform porting", "JMS/WebSocket integration"],
+      technology: ["Java 7", "Java/JEE", "JMS", "WebSocket", "PostgreSQL"]
     }
   ],
   impactStory: {
@@ -180,7 +185,7 @@ window.PORTFOLIO_DATA = {
       name: "Clash Disassembly",
       repo: "https://github.com/lisu188/clash-disassembly",
       summary: "Reverse-engineering and reconstructing a Windows 95 game from its original binary. The project maps 4,070 recovered functions into 138 independently compiled C17 translation units and validates behavior against the original assembly.",
-      tags: ["Assembly", "C17", "SDL", "4,070 functions", "138 translation units"]
+      tags: ["Assembly", "C17", "SDL", "4,070 functions"]
     },
     {
       category: "Native performance",
@@ -251,9 +256,6 @@ window.PORTFOLIO_DATA = {
     }
   ],
   taxonomy: [
-    "Backend / JVM",
-    "Cloud / Integration",
-    "JVM internals",
     "Systems / Native",
     "Reverse engineering",
     "Simulation / Game tech",
