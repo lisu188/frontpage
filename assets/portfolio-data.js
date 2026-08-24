@@ -1,7 +1,7 @@
 window.PORTFOLIO_DATA = {
   profile: {
     name: "Andrzej Lis",
-    title: "Senior / Lead Software Engineer",
+    title: "Senior Software Engineer / Lead Engineer",
     positioning: "Java / Kotlin Backend Engineer",
     location: "Kraków, Poland",
     email: "andrzej.lis3@gmail.com",
@@ -15,7 +15,7 @@ window.PORTFOLIO_DATA = {
   heroSignals: [
     { value: "12+", label: "years building production software" },
     { value: "Java / Kotlin", label: "primary backend specialization" },
-    { value: "Kafka / JMS", label: "messaging and integration experience" },
+    { value: "C++ / Python", label: "custom engine and automated gameplay" },
     { value: "2h → 30m", label: "CI/CD build-time improvement" }
   ],
   capabilities: [
@@ -60,6 +60,22 @@ window.PORTFOLIO_DATA = {
     ],
     quality: ["JUnit", "integration tests", "JaCoCo gate", "CI smoke test", "deterministic simulations"],
     tags: ["Java", "Spring Boot", "REST", "STOMP/WebSocket", "Concurrency", "Gradle"]
+  },
+  nouraajdCase: {
+    name: "Fall of Nouraajd",
+    repo: "https://github.com/lisu188/fall-of-nouraajd",
+    walkthrough: "https://raw.githubusercontent.com/lisu188/fall-of-nouraajd/main/screenshots/nouraajd-walkthrough.mp4",
+    image: "https://raw.githubusercontent.com/lisu188/fall-of-nouraajd/main/screenshots/nouraajd-walkthrough-poster.png",
+    imageAlt: "Fall of Nouraajd automated campaign walkthrough",
+    eyebrow: "Systems engineering · custom game engine",
+    summary: "I’m building a dark-fantasy RPG on a custom C++ engine with a Python gameplay layer, SDL2 rendering and pybind11 bindings. The same architecture supports interactive play, headless execution, automated full-campaign walkthroughs, deterministic diagnostics and CI-enforced validation.",
+    proofs: [
+      { label: "Custom engine", value: "C++ · SDL2 · Python · pybind11" },
+      { label: "Automated gameplay", value: "Full campaign executed headlessly" },
+      { label: "Verification", value: "90% eligible-line coverage gate" },
+      { label: "Tooling", value: "MCP engine API · deterministic playtest traces" }
+    ],
+    tags: ["C++", "Python", "SDL2", "pybind11", "CMake", "Linux + Windows"]
   },
   kotlinCase: {
     name: "Spotify Web API Demo",
@@ -137,6 +153,13 @@ window.PORTFOLIO_DATA = {
       tradeoff: "A stricter boundary adds adapters, but keeps the core deterministic, testable and reusable."
     },
     {
+      title: "Expose a native engine to automation",
+      source: "Fall of Nouraajd",
+      repo: "https://github.com/lisu188/fall-of-nouraajd",
+      decision: "Expose the C++ engine through pybind11/Python and a headless MCP surface.",
+      tradeoff: "The binding layer adds maintenance cost, but unlocks scripted testing, inspection and automated walkthroughs."
+    },
+    {
       title: "Explicit consistency for realtime updates",
       source: "WinRisk",
       repo: "https://github.com/lisu188/winrisk",
@@ -149,25 +172,9 @@ window.PORTFOLIO_DATA = {
       repo: "https://github.com/lisu188/spotify-web-api-demo",
       decision: "Use Firestore, Secret Manager and ADC around a Cloud Run service.",
       tradeoff: "Tighter GCP integration reduces local symmetry but simplifies operational secret and state management."
-    },
-    {
-      title: "Expose a native engine to automation",
-      source: "Fall of Nouraajd",
-      repo: "https://github.com/lisu188/fall-of-nouraajd",
-      decision: "Expose the C++ engine through pybind11/Python and a headless MCP surface.",
-      tradeoff: "The binding layer adds maintenance cost, but unlocks scripted testing, inspection and automated walkthroughs."
     }
   ],
   breadth: [
-    {
-      category: "Systems / game engineering",
-      name: "Fall of Nouraajd",
-      repo: "https://github.com/lisu188/fall-of-nouraajd",
-      image: "https://raw.githubusercontent.com/lisu188/fall-of-nouraajd/main/screenshots/nouraajd-exploration.png",
-      imageAlt: "Fall of Nouraajd map exploration interface",
-      summary: "Building a dark-fantasy RPG as a systems-engineering project: a custom C++ engine, Python gameplay layer, SDL2 rendering and pybind11 integration, supported by headless automation, content validation and a 90% eligible-line coverage gate.",
-      tags: ["C++", "Python", "SDL2", "pybind11", "CMake", "Automation"]
-    },
     {
       category: "Reverse engineering",
       name: "Clash Disassembly",
