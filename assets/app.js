@@ -30,6 +30,7 @@
   $("#github-top").href = d.profile.github;
   $("#linkedin-top").href = d.profile.linkedin;
   $("#email-top").href = `mailto:${d.profile.email}`;
+  $("#nouraajd-hero-link").href = d.nouraajdCase.repo;
 
   $("#signals").replaceChildren(...d.heroSignals.map(s => {
     const n = el("article", "signal-card");
@@ -50,6 +51,22 @@
   $("#flagship-decisions").innerHTML = d.flagship.decisions.map(x => `<li>${x}</li>`).join("");
   $("#flagship-quality").textContent = d.flagship.quality.join(" · ");
   $("#flagship-link").href = d.flagship.repo;
+
+  const nouraajd = d.nouraajdCase;
+  $("#nouraajd-title").textContent = nouraajd.name;
+  $("#nouraajd-eyebrow").textContent = nouraajd.eyebrow;
+  $("#nouraajd-summary").textContent = nouraajd.summary;
+  $("#nouraajd-proofs").replaceChildren(...nouraajd.proofs.map(p => {
+    const n = el("div", "proof-card");
+    n.innerHTML = `<small>${p.label}</small><strong>${p.value}</strong>`;
+    return n;
+  }));
+  $("#nouraajd-tags").innerHTML = tags(nouraajd.tags);
+  $("#nouraajd-link").href = nouraajd.repo;
+  $("#nouraajd-walkthrough").href = nouraajd.walkthrough;
+  $("#nouraajd-media-link").href = nouraajd.walkthrough;
+  $("#nouraajd-image").src = nouraajd.image;
+  $("#nouraajd-image").alt = nouraajd.imageAlt;
 
   $("#kotlin-title").textContent = d.kotlinCase.name;
   $("#kotlin-eyebrow").textContent = d.kotlinCase.eyebrow;
@@ -148,7 +165,7 @@
     url: "https://lisu188.github.io/frontpage/",
     sameAs: [d.profile.github, d.profile.linkedin],
     alumniOf: [{ "@type": "CollegeOrUniversity", name: "AGH University of Krakow" }],
-    knowsAbout: ["Java", "Kotlin", "Spring Boot", "Kafka", "JMS", "Distributed systems", "JVM", "C++", "Reverse engineering"]
+    knowsAbout: ["Java", "Kotlin", "Spring Boot", "Kafka", "JMS", "Distributed systems", "JVM", "C++", "Python", "Game engines", "Reverse engineering"]
   };
   $("#jsonld").textContent = JSON.stringify(jsonLd);
 
