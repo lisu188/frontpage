@@ -1,22 +1,51 @@
-# Andrzej Lis — Portfolio
+# Andrzej Lis — Senior Java/Kotlin Backend Portfolio
 
-Single-file professional portfolio for [github.com/lisu188](https://github.com/lisu188).
-
-The site is intentionally dependency-free: the complete page is contained in `index.html` with embedded CSS and no frontend build step.
+Static GitHub Pages portfolio focused on Senior Software Engineer / Senior Backend Engineer roles.
 
 ## Positioning
 
-The portfolio is organized around two complementary engineering strengths:
+The portfolio is intentionally ordered by evidence:
 
-- JVM/backend/cloud engineering and technical leadership
-- native systems work, game technology and evidence-driven reverse engineering
+1. Java/Kotlin backend specialization
+2. Current JVM case studies
+3. Professional engineering impact
+4. System-design decisions
+5. Broader systems, reverse-engineering, simulation and ML interests
+6. Education and continued learning
 
-Selected public repositories are linked directly from the page rather than duplicated into a separate project database.
+## Content sources
 
-## Run locally
+- `assets/portfolio-data.js` is the single source of truth for page content.
+- CV facts are based on `assets/Andrzej-Lis-CV.pdf`.
+- Public professional-profile data is linked to LinkedIn.
+- Project claims should be backed by public repository READMEs or source.
 
-Open `index.html` directly in a browser or serve the repository with any static HTTP server.
+Do not add unsupported metrics or infer missing education fields.
+
+## Local preview
+
+```sh
+python3 -m http.server 8000
+```
+
+Open `http://127.0.0.1:8000/`.
+
+## Validation
+
+```sh
+python3 scripts/check_portfolio.py
+```
+
+The CI workflow also renders desktop and mobile screenshots with Playwright and uploads them as artifacts.
+
+## Updating content
+
+1. Edit `assets/portfolio-data.js`.
+2. Keep `index.html` structural; do not duplicate factual project/experience copy there unless needed for metadata or progressive rendering.
+3. Run `python3 scripts/check_portfolio.py`.
+4. Preview at desktop and mobile widths.
+5. Verify external project and profile links before merging.
 
 ## Deployment
 
-The repository is suitable for GitHub Pages or any static hosting service. No build command is required.
+GitHub Pages can deploy directly from the `main` branch and repository root.

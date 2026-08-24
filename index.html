@@ -1,457 +1,275 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Andrzej Lis — Senior Software Engineer in Kraków. Java/Kotlin backend, distributed systems, system design, CI/CD and systems engineering.">
-<meta name="theme-color" content="#080b10">
-<meta property="og:title" content="Andrzej Lis — Senior Software Engineer">
-<meta property="og:description" content="12+ years building backend systems and solving complex engineering problems. Java, Kotlin, Spring, Kafka, data systems and CI/CD.">
-<title>Andrzej Lis — Senior Software Engineer</title>
-<style>
-:root{
-  --bg:#080b10;
-  --bg-soft:#0d1118;
-  --panel:#111722;
-  --panel-2:#151d29;
-  --text:#f3f6f8;
-  --muted:#94a3b8;
-  --muted-2:#6f7f93;
-  --line:rgba(255,255,255,.09);
-  --line-strong:rgba(255,255,255,.15);
-  --green:#8ff0c8;
-  --blue:#9ac4ff;
-  --violet:#c2b3ff;
-  --max:1180px;
-  --radius:24px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  color:var(--text);
-  background:
-    radial-gradient(900px 520px at 85% -5%,rgba(79,132,255,.13),transparent 60%),
-    radial-gradient(780px 520px at -10% 28%,rgba(70,224,167,.10),transparent 58%),
-    var(--bg);
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  line-height:1.55;
-  -webkit-font-smoothing:antialiased;
-}
-a{color:inherit}
-.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
-.nav{
-  position:sticky;top:0;z-index:20;
-  display:flex;align-items:center;justify-content:space-between;
-  height:74px;
-  background:rgba(8,11,16,.72);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid var(--line);
-}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%}
-.brand{font-weight:850;letter-spacing:-.04em;text-decoration:none;font-size:19px}
-.brand span{color:var(--green)}
-.nav-links{display:flex;align-items:center;gap:22px}
-.nav-links a{font-size:13px;font-weight:720;text-decoration:none;color:var(--muted)}
-.nav-links a:hover{color:var(--text)}
-.hero{
-  min-height:700px;
-  display:grid;
-  grid-template-columns:minmax(0,1.45fr) minmax(290px,.55fr);
-  gap:72px;
-  align-items:center;
-  padding:88px 0 96px;
-}
-.badge{
-  display:inline-flex;align-items:center;gap:10px;
-  padding:8px 12px;border:1px solid var(--line);border-radius:999px;
-  color:#c8d4df;background:rgba(255,255,255,.025);
-  font-size:12px;font-weight:800;letter-spacing:.04em;
-}
-.badge i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 18px rgba(143,240,200,.7)}
-h1{
-  margin:24px 0 24px;
-  font-size:clamp(62px,8vw,108px);
-  line-height:.89;
-  letter-spacing:-.075em;
-  max-width:880px;
-}
-h1 .accent{display:block;color:var(--green)}
-.hero-copy{
-  max-width:770px;
-  color:#b2bfcc;
-  font-size:clamp(18px,2vw,22px);
-}
-.hero-copy strong{color:var(--text);font-weight:760}
-.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:34px}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  min-height:44px;padding:0 17px;border:1px solid var(--line-strong);
-  border-radius:999px;text-decoration:none;font-size:13px;font-weight:800;
-  background:rgba(255,255,255,.025);
-}
-.btn.primary{background:var(--text);color:#0a0e14;border-color:var(--text)}
-.btn:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.26)}
-.hero-side{display:flex;flex-direction:column;gap:14px}
-.portrait{
-  border:1px solid var(--line);border-radius:30px;padding:10px;
-  background:linear-gradient(145deg,rgba(143,240,200,.10),rgba(154,196,255,.08));
-  box-shadow:0 35px 90px rgba(0,0,0,.34);
-}
-.portrait img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:22px;filter:saturate(.84) contrast(1.04)}
-.signal{
-  border:1px solid var(--line);border-radius:18px;padding:16px 17px;
-  background:rgba(255,255,255,.024)
-}
-.signal-label{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted-2);font-weight:850}
-.signal strong{display:block;margin-top:6px;font-size:15px}
-.signal p{margin:4px 0 0;color:var(--muted);font-size:12px}
-.metrics{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
-  padding-bottom:92px;
-}
-.metric{
-  border:1px solid var(--line);border-radius:18px;padding:22px 20px;
-  background:linear-gradient(180deg,rgba(255,255,255,.028),rgba(255,255,255,.012));
-}
-.metric strong{display:block;font-size:36px;line-height:1;letter-spacing:-.055em}
-.metric span{display:block;margin-top:9px;color:var(--muted);font-size:12px}
-section{padding:96px 0;border-top:1px solid var(--line)}
-.section-head{
-  display:grid;grid-template-columns:.55fr 1.35fr;gap:54px;
-  align-items:start;margin-bottom:44px
-}
-.kicker{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--green);font-weight:850}
-h2{margin:0;font-size:clamp(38px,5vw,61px);line-height:1.02;letter-spacing:-.05em}
-.section-copy{max-width:760px;margin:16px 0 0;color:var(--muted);font-size:16px}
-.experience{display:grid;gap:14px}
-.role{
-  display:grid;grid-template-columns:190px 1fr auto;gap:28px;align-items:start;
-  padding:28px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.018)
-}
-.role-period{color:var(--muted-2);font-size:12px;font-weight:780;padding-top:5px}
-.role h3{margin:0;font-size:24px;letter-spacing:-.03em}
-.role-company{margin-top:4px;color:var(--blue);font-size:13px;font-weight:760}
-.role p{margin:13px 0 0;color:var(--muted);max-width:760px}
-.role-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:17px}
-.tag{padding:5px 9px;border:1px solid var(--line);border-radius:999px;color:#b7c4d1;font-size:10px;font-weight:760}
-.role-mark{font-size:20px;color:var(--green)}
-.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.project{
-  position:relative;min-height:315px;padding:28px;border:1px solid var(--line);
-  border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.012));
-  overflow:hidden;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between
-}
-.project:after{
-  content:"";position:absolute;width:240px;height:240px;right:-100px;top:-100px;border-radius:50%;
-  background:radial-gradient(circle,rgba(143,240,200,.12),transparent 68%)
-}
-.project:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.22)}
-.project-index{font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted-2);font-weight:850}
-.project h3{font-size:29px;letter-spacing:-.04em;margin:40px 0 10px}
-.project p{margin:0;color:var(--muted);max-width:520px}
-.project .arrow{position:absolute;right:26px;bottom:24px;font-size:20px;color:var(--green)}
-.project .role-tags{padding-right:30px}
-.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.skill-card{border:1px solid var(--line);border-radius:20px;padding:23px;background:rgba(255,255,255,.018)}
-.skill-card h3{margin:0 0 14px;font-size:16px}
-.skill-list{display:flex;gap:7px;flex-wrap:wrap}
-.skill-list span{font-size:11px;color:#c5d0da;background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:999px;padding:6px 9px}
-.leadership{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:15px
-}
-.lead-card{border-top:1px solid var(--line-strong);padding:20px 4px 0}
-.lead-card strong{font-size:18px;letter-spacing:-.02em}
-.lead-card p{margin:7px 0 0;color:var(--muted);font-size:13px}
-.profile-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
-.profile-card{border:1px solid var(--line);border-radius:22px;padding:27px;background:rgba(255,255,255,.018)}
-.profile-card h3{margin:0 0 12px;font-size:20px}
-.profile-card p{margin:0;color:var(--muted)}
-.education-row{display:flex;justify-content:space-between;gap:18px;margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
-.education-row strong{font-size:14px}
-.education-row span{color:var(--muted-2);font-size:12px;white-space:nowrap}
-.contact{
-  display:grid;grid-template-columns:1fr auto;gap:28px;align-items:end
-}
-.contact h2{max-width:850px}
-.contact p{max-width:690px;color:var(--muted);font-size:16px}
-.footer{display:flex;justify-content:space-between;gap:20px;padding:30px 0 44px;color:var(--muted-2);font-size:11px;border-top:1px solid var(--line)}
-@media(max-width:900px){
-  .nav-links a:not(.keep){display:none}
-  .hero{grid-template-columns:1fr;gap:36px;min-height:auto;padding-top:70px}
-  .hero-side{max-width:360px}
-  .metrics{grid-template-columns:repeat(2,1fr)}
-  .section-head{grid-template-columns:1fr;gap:14px}
-  .role{grid-template-columns:1fr}
-  .role-mark{display:none}
-  .projects,.skills-grid,.leadership,.profile-grid{grid-template-columns:1fr}
-  .contact{grid-template-columns:1fr}
-}
-@media(max-width:560px){
-  .wrap{width:min(calc(100% - 26px),var(--max))}
-  .nav{height:66px}
-  h1{font-size:56px}
-  .hero{padding:58px 0 66px}
-  .metrics{grid-template-columns:1fr 1fr;padding-bottom:70px}
-  .metric{padding:18px 16px}
-  .metric strong{font-size:31px}
-  section{padding:72px 0}
-  .project{min-height:290px;padding:22px}
-  .role{padding:22px}
-  .footer{flex-direction:column}
-}
-@media(prefers-reduced-motion:no-preference){
-  .btn,.project{transition:.18s ease}
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Andrzej Lis — Senior Java/Kotlin Backend Engineer">
+  <meta name="theme-color" content="#070b10">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://lisu188.github.io/frontpage/">
+  <meta property="og:title" content="Andrzej Lis — Senior Java/Kotlin Backend Engineer">
+  <meta property="og:description" content="12+ years building enterprise backend systems with Java, Kotlin, Spring and messaging platforms.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/7967861?v=4">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Andrzej Lis — Senior Java/Kotlin Backend Engineer">
+  <meta name="twitter:description" content="12+ years building enterprise backend systems with Java, Kotlin, Spring and messaging platforms.">
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/7967861?v=4">
+  <link rel="canonical" href="https://lisu188.github.io/frontpage/">
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/7967861?v=4">
+  <link rel="stylesheet" href="assets/styles.css">
+  <title>Andrzej Lis — Senior Software Engineer</title>
+  <script id="jsonld" type="application/ld+json"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
+
 <header class="nav">
   <div class="wrap nav-inner">
-    <a class="brand" href="#top">Andrzej Lis<span>.</span></a>
+    <a id="brand" class="brand" href="#top">Andrzej Lis</a>
     <nav class="nav-links" aria-label="Main navigation">
-      <a href="#experience">Experience</a>
+      <a href="#backend">Backend</a>
       <a href="#work">Work</a>
-      <a href="#skills">Skills</a>
-      <a href="#profile">Profile</a>
-      <a class="keep" href="https://github.com/lisu188" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <a href="#experience">Experience</a>
+      <a href="#breadth">Breadth</a>
+      <a href="#education">Education</a>
+      <a class="keep" id="github-top" href="https://github.com/lisu188" target="_blank" rel="noreferrer">GitHub ↗</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
-  <div class="wrap hero">
+<main id="main">
+  <div id="top" class="wrap hero">
     <div>
-      <div class="badge"><i></i> Senior Software Engineer · Java / Kotlin · Kraków</div>
-      <h1>Backend engineering.<span class="accent">Systems ownership.</span></h1>
-      <p class="hero-copy">
-        I am a <strong>hands-on senior software engineer with 12+ years of experience</strong> designing and building enterprise backend systems.
-        My core stack is Java/Kotlin, Spring, messaging and data-intensive systems, with additional depth in CI/CD, native code and reverse engineering.
-      </p>
+      <div id="hero-badge" class="badge">Senior Software Engineer · Java / Kotlin · Kraków</div>
+      <h1>Backend depth.<span>Systems range.</span></h1>
+      <p id="hero-summary" class="hero-copy">Hands-on Senior Software Engineer with 12+ years of experience building enterprise backend systems.</p>
       <div class="actions">
-        <a class="btn primary" href="#experience">View experience</a>
-        <a class="btn" href="https://www.linkedin.com/in/andrzej-lis-1b4830a6/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-        <a class="btn" href="mailto:andrzej.lis3@gmail.com">Email</a>
+        <a id="cv-top" class="btn primary" href="assets/Andrzej-Lis-CV.pdf" download>Download CV</a>
+        <a id="linkedin-top" class="btn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a id="email-top" class="btn" href="mailto:andrzej.lis3@gmail.com">Email</a>
       </div>
     </div>
-
-    <aside class="hero-side" aria-label="Profile summary">
-      <div class="portrait">
-        <img src="https://avatars.githubusercontent.com/u/7967861?v=4" alt="Andrzej Lis">
+    <aside class="hero-aside" aria-label="Profile">
+      <div class="portrait"><img id="avatar" src="" alt=""></div>
+      <div class="mini-proof">
+        <small>Primary focus</small>
+        <strong>Java · Kotlin · Spring · Messaging</strong>
       </div>
-      <div class="signal">
-        <div class="signal-label">Primary focus</div>
-        <strong>JVM backend · distributed systems</strong>
-        <p>Java/Kotlin, Spring, Kafka/JMS, SQL/NoSQL, CI/CD</p>
+      <div class="mini-proof">
+        <small>Secondary depth</small>
+        <strong>JVM internals · C++ · Reverse engineering</strong>
       </div>
     </aside>
   </div>
 
-  <div class="wrap metrics" aria-label="Career highlights">
-    <div class="metric"><strong>12+</strong><span>years in software engineering</span></div>
-    <div class="metric"><strong>JVM</strong><span>Java/Kotlin backend as the core specialization</span></div>
-    <div class="metric"><strong>Kafka</strong><span>messaging, integration and distributed workflows</span></div>
-    <div class="metric"><strong>4×</strong><span>faster CI/CD: ~2h → ~30m</span></div>
-  </div>
+  <div id="signals" class="wrap signals" aria-label="Engineering highlights"></div>
 
-  <section id="experience">
+  <section id="backend">
     <div class="wrap">
       <div class="section-head">
-        <div class="kicker">Experience</div>
+        <div class="kicker">Backend specialization</div>
         <div>
-          <h2>Enterprise backend systems, architecture and delivery.</h2>
-          <p class="section-copy">
-            More than a decade of hands-on engineering across telecom and airline systems, followed by large-scale backend work for Google Fiber. Leadership experience supports the engineering role rather than defining it.
-          </p>
+          <h2>Java and Kotlin first. The system around them matters too.</h2>
+          <p class="section-copy">The portfolio is intentionally backend-first: JVM application design, Spring, messaging, data, concurrency and delivery. Native code and research projects stay visible as supporting evidence of engineering range.</p>
         </div>
       </div>
-
-      <div class="experience">
-        <article class="role">
-          <div class="role-period">Aug 2020 — Present</div>
-          <div>
-            <h3>Lead Software Engineer / Resource Manager</h3>
-            <div class="role-company">EPAM Systems · client: Google / Google Fiber</div>
-            <p>Own feature design and implementation in a large internal codebase for Google Fiber, collaborate with client technical leadership and stakeholders, and drive work from design through predictable delivery.</p>
-            <div class="role-tags"><span class="tag">Java 8</span><span class="tag">Google Fiber</span><span class="tag">Feature design</span><span class="tag">Large codebase</span></div>
-          </div>
-          <div class="role-mark">01</div>
-        </article>
-
-        <article class="role">
-          <div class="role-period">Jan 2019 — Jul 2020</div>
-          <div>
-            <h3>Team Leader / Scrum Master / Software Engineer</h3>
-            <div class="role-company">Sabre · Crew Manager</div>
-            <p>Designed and developed a training module as a Kafka-connected microservice, implemented backend features and priority fixes, and provided technical guidance across multiple Scrum teams.</p>
-            <div class="role-tags"><span class="tag">Java 8</span><span class="tag">Spring Boot</span><span class="tag">Kafka</span><span class="tag">Oracle</span><span class="tag">MongoDB</span></div>
-          </div>
-          <div class="role-mark">02</div>
-        </article>
-
-        <article class="role">
-          <div class="role-period">Feb 2017 — Dec 2018</div>
-          <div>
-            <h3>Software Engineer</h3>
-            <div class="role-company">j-labs · client: Sabre / Crew Manager</div>
-            <p>Built backend functionality around Spring and JMS, supported teammates technically and led CI/CD improvements that reduced build time from roughly two hours to thirty minutes.</p>
-            <div class="role-tags"><span class="tag">Spring</span><span class="tag">Hibernate</span><span class="tag">JMS</span><span class="tag">ActiveMQ</span><span class="tag">TeamCity</span></div>
-          </div>
-          <div class="role-mark">03</div>
-        </article>
-
-        <article class="role">
-          <div class="role-period">2013 — 2017</div>
-          <div>
-            <h3>Software Engineer</h3>
-            <div class="role-company">j-labs / Sabre · Motorola Solutions</div>
-            <p>Worked across legacy airline systems, Java/JEE backend services and JavaScript UI integration; owned an ESB component, migrated SVN repositories to Git and delivered JMS/WebSocket integrations.</p>
-            <div class="role-tags"><span class="tag">Java 5–7</span><span class="tag">C++11</span><span class="tag">WebLogic</span><span class="tag">WebSocket</span><span class="tag">PostgreSQL</span></div>
-          </div>
-          <div class="role-mark">04</div>
-        </article>
-      </div>
+      <div id="capability-grid" class="capability-grid"></div>
     </div>
   </section>
 
   <section id="work">
     <div class="wrap">
       <div class="section-head">
-        <div class="kicker">Selected work</div>
+        <div class="kicker">Selected engineering work</div>
         <div>
-          <h2>Projects that demonstrate engineering depth and range.</h2>
-          <p class="section-copy">
-            Beyond enterprise JVM work, these projects demonstrate hands-on implementation across cloud integration, concurrency, native performance, game systems and reverse engineering.
-          </p>
+          <h2>Current public work that proves the backend story.</h2>
+          <p class="section-copy">The first projects are selected because they show current Java/Kotlin engineering decisions, not because they have the flashiest UI.</p>
         </div>
       </div>
 
-      <div class="projects">
-        <a class="project" href="https://github.com/lisu188/winrisk" target="_blank" rel="noreferrer">
+      <article class="case case--flagship">
+        <div class="case-grid">
           <div>
-            <div class="project-index">01 · JVM / Full stack</div>
-            <h3>WinRisk</h3>
-            <p>Concurrent Java strategy-game engine evolved into a Spring Boot service with REST commands, WebSocket state updates and a React/TypeScript client.</p>
-            <div class="role-tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">React</span><span class="tag">WebSocket</span></div>
+            <span id="flagship-eyebrow" class="eyebrow"></span>
+            <h3 id="flagship-title"></h3>
+            <p id="flagship-summary"></p>
+            <ul id="flagship-decisions" class="decision-list"></ul>
+            <div id="flagship-tags"></div>
+            <div class="quality"><strong>Quality:</strong> <span id="flagship-quality"></span></div>
+            <a id="flagship-link" class="text-link" href="#" target="_blank" rel="noreferrer">View repository ↗</a>
           </div>
-          <span class="arrow">↗</span>
-        </a>
+          <div class="arch-diagram" aria-label="WinRisk architecture diagram">
+            <svg viewBox="0 0 560 330" role="img" aria-labelledby="winrisk-arch-title">
+              <title id="winrisk-arch-title">WinRisk architecture: browser client, Spring Boot service and pure Java engine</title>
+              <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#8af1c5"/><stop offset="1" stop-color="#8fc1ff"/></linearGradient></defs>
+              <rect x="35" y="28" width="490" height="72" rx="18" fill="#101a25" stroke="#334455"/>
+              <text x="280" y="58" text-anchor="middle" fill="#f5f7fa" font-size="17" font-family="system-ui" font-weight="700">React + TypeScript client</text>
+              <text x="280" y="82" text-anchor="middle" fill="#91a2b5" font-size="12" font-family="system-ui">REST commands · STOMP/WebSocket updates</text>
+              <path d="M280 100 L280 130" stroke="url(#g1)" stroke-width="3"/>
+              <rect x="35" y="130" width="490" height="72" rx="18" fill="#101a25" stroke="#334455"/>
+              <text x="280" y="160" text-anchor="middle" fill="#f5f7fa" font-size="17" font-family="system-ui" font-weight="700">Spring Boot web layer</text>
+              <text x="280" y="184" text-anchor="middle" fill="#91a2b5" font-size="12" font-family="system-ui">per-game synchronization · versioned state</text>
+              <path d="M280 202 L280 232" stroke="url(#g1)" stroke-width="3"/>
+              <rect x="35" y="232" width="490" height="72" rx="18" fill="#101a25" stroke="#334455"/>
+              <text x="280" y="262" text-anchor="middle" fill="#f5f7fa" font-size="17" font-family="system-ui" font-weight="700">Pure Java domain engine</text>
+              <text x="280" y="286" text-anchor="middle" fill="#91a2b5" font-size="12" font-family="system-ui">rules · AI · maps · serialization · headless simulation</text>
+            </svg>
+          </div>
+        </div>
+      </article>
 
-        <a class="project" href="https://github.com/lisu188/spotify-web-api-demo" target="_blank" rel="noreferrer">
+      <article class="case">
+        <div class="case-grid">
           <div>
-            <div class="project-index">02 · Backend / Cloud</div>
-            <h3>Spotify Web API Demo</h3>
-            <p>Kotlin/Spring integration service using OAuth, asynchronous jobs, Firestore, Secret Manager, Cloud Run and Docker.</p>
-            <div class="role-tags"><span class="tag">Kotlin</span><span class="tag">Spring</span><span class="tag">GCP</span><span class="tag">Firestore</span></div>
+            <span id="kotlin-eyebrow" class="eyebrow"></span>
+            <h3 id="kotlin-title"></h3>
+            <p id="kotlin-summary"></p>
+            <ul id="kotlin-decisions" class="decision-list"></ul>
+            <div id="kotlin-tags"></div>
+            <div class="inline-links">
+              <a id="kotlin-link" class="text-link" href="#" target="_blank" rel="noreferrer">Repository ↗</a>
+              <a id="kotlin-live" class="text-link" href="#" target="_blank" rel="noreferrer">Live deployment ↗</a>
+            </div>
           </div>
-          <span class="arrow">↗</span>
-        </a>
+          <div class="arch-diagram" aria-label="Spotify integration architecture diagram">
+            <svg viewBox="0 0 560 330" role="img" aria-labelledby="spotify-arch-title">
+              <title id="spotify-arch-title">Spotify Web API Demo architecture using Spring Boot, external APIs and Google Cloud services</title>
+              <rect x="25" y="35" width="145" height="60" rx="16" fill="#101a25" stroke="#334455"/>
+              <text x="97" y="71" text-anchor="middle" fill="#f5f7fa" font-size="15" font-family="system-ui" font-weight="700">Spotify / Last.fm</text>
+              <rect x="205" y="115" width="150" height="82" rx="18" fill="#111e29" stroke="#5b7d78"/>
+              <text x="280" y="148" text-anchor="middle" fill="#8af1c5" font-size="16" font-family="system-ui" font-weight="700">Kotlin + Spring</text>
+              <text x="280" y="173" text-anchor="middle" fill="#91a2b5" font-size="12" font-family="system-ui">Cloud Run · Java 21</text>
+              <rect x="390" y="35" width="145" height="60" rx="16" fill="#101a25" stroke="#334455"/>
+              <text x="462" y="61" text-anchor="middle" fill="#f5f7fa" font-size="14" font-family="system-ui" font-weight="700">Secret Manager</text>
+              <text x="462" y="80" text-anchor="middle" fill="#91a2b5" font-size="11" font-family="system-ui">ADC</text>
+              <rect x="25" y="235" width="145" height="60" rx="16" fill="#101a25" stroke="#334455"/>
+              <text x="97" y="271" text-anchor="middle" fill="#f5f7fa" font-size="15" font-family="system-ui" font-weight="700">Cloud Scheduler</text>
+              <rect x="390" y="235" width="145" height="60" rx="16" fill="#101a25" stroke="#334455"/>
+              <text x="462" y="261" text-anchor="middle" fill="#f5f7fa" font-size="15" font-family="system-ui" font-weight="700">Firestore</text>
+              <text x="462" y="280" text-anchor="middle" fill="#91a2b5" font-size="11" font-family="system-ui">jobs · tokens · state</text>
+              <path d="M170 78 L220 128 M390 78 L340 128 M170 255 L220 188 M390 255 L340 188" stroke="#8fc1ff" stroke-width="2.5" fill="none"/>
+            </svg>
+          </div>
+        </div>
+      </article>
 
-        <a class="project" href="https://github.com/lisu188/fall-of-nouraajd" target="_blank" rel="noreferrer">
-          <div>
-            <div class="project-index">03 · Game / Systems</div>
-            <h3>Fall of Nouraajd</h3>
-            <p>Dark-fantasy 2D game combining a C++ engine with Python, SDL2 and pybind11, supported by headless automation and validation tooling.</p>
-            <div class="role-tags"><span class="tag">C++</span><span class="tag">Python</span><span class="tag">SDL2</span><span class="tag">pybind11</span></div>
-          </div>
-          <span class="arrow">↗</span>
-        </a>
-
-        <a class="project" href="https://github.com/lisu188/clash-disassembly" target="_blank" rel="noreferrer">
-          <div>
-            <div class="project-index">04 · Reverse engineering</div>
-            <h3>Clash Disassembly</h3>
-            <p>Evidence-driven reconstruction of a Win95 game binary, recovered subsystem behavior and a modern implementation path.</p>
-            <div class="role-tags"><span class="tag">Assembly</span><span class="tag">C</span><span class="tag">Reverse engineering</span><span class="tag">SDL</span></div>
-          </div>
-          <span class="arrow">↗</span>
-        </a>
+      <div class="jvm-lab">
+        <div>
+          <span class="eyebrow">JVM under the hood</span>
+          <h3 id="jvm-lab-title"></h3>
+          <a id="jvm-lab-link" class="text-link" href="#" target="_blank" rel="noreferrer">Explore repository ↗</a>
+        </div>
+        <div>
+          <p id="jvm-lab-summary"></p>
+          <div id="jvm-lab-topics"></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="skills">
+  <section id="experience">
     <div class="wrap">
       <div class="section-head">
-        <div class="kicker">Capabilities</div>
+        <div class="kicker">Professional experience</div>
         <div>
-          <h2>Backend first. Broad enough to own the system around it.</h2>
-          <p class="section-copy">
-            The strongest signal is JVM backend engineering, supported by messaging, databases, delivery tooling, system design and experience operating across complex codebases.
-          </p>
+          <h2>Technical impact first, leadership as context.</h2>
+          <p class="section-copy">Actual historical titles are preserved, but each role is described through backend engineering, integration, system ownership and measurable delivery outcomes before management scope.</p>
         </div>
       </div>
+      <div id="experience-list" class="experience-list"></div>
+      <article id="impact-story" class="impact-story"></article>
+    </div>
+  </section>
 
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3>Languages & backend</h3>
-          <div class="skill-list"><span>Java</span><span>Kotlin</span><span>C++11</span><span>Spring Boot</span><span>Spring Framework</span><span>Hibernate</span></div>
-        </div>
-        <div class="skill-card">
-          <h3>Messaging & data</h3>
-          <div class="skill-list"><span>Kafka</span><span>JMS / ActiveMQ</span><span>WebSocket</span><span>Oracle</span><span>MongoDB</span><span>PostgreSQL</span></div>
-        </div>
-        <div class="skill-card">
-          <h3>Delivery & engineering</h3>
-          <div class="skill-list"><span>Maven</span><span>Gradle</span><span>TeamCity</span><span>Jenkins</span><span>Git</span><span>CI/CD</span></div>
+  <section id="decisions">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">System design</div>
+        <div>
+          <h2>Seniority is easier to judge from decisions than adjectives.</h2>
+          <p class="section-copy">A few concrete design choices from public work, including the trade-offs they introduce.</p>
         </div>
       </div>
+      <div id="decision-grid" class="decision-grid"></div>
+    </div>
+  </section>
 
-      <div class="leadership">
-        <div class="lead-card"><strong>System design</strong><p>Designing backend features, service boundaries, integrations and maintainable implementation paths.</p></div>
-        <div class="lead-card"><strong>Engineering delivery</strong><p>Taking work from technical design through implementation, review, integration and production-ready delivery.</p></div>
-        <div class="lead-card"><strong>Technical mentoring</strong><p>Reviewing work, explaining complex concepts and helping engineers improve quality and effectiveness.</p></div>
+  <section id="breadth">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Beyond backend</div>
+        <div>
+          <h2>Native systems, reverse engineering, simulation and research.</h2>
+          <p class="section-copy">These projects are deliberately secondary. They show how far the engineering curiosity extends once the main Java/Kotlin backend story is established.</p>
+          <div id="taxonomy" class="taxonomy" aria-label="Project categories"></div>
+        </div>
+      </div>
+      <div id="breadth-grid" class="breadth-grid"></div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Education & learning</div>
+        <div>
+          <h2>Computer science foundations plus continued JVM learning.</h2>
+          <p class="section-copy">Formal education is shown with source uncertainty preserved: AGH details come from the CV; the public LinkedIn profile lists Jagiellonian University dates but does not expose a program or degree.</p>
+        </div>
+      </div>
+      <div class="education-layout">
+        <div id="education-list" class="education-list"></div>
+        <aside class="cert-card">
+          <span class="eyebrow">Selected certifications</span>
+          <h3>Java, Kotlin and concurrency</h3>
+          <ul id="certifications"></ul>
+          <a id="cert-link" class="text-link" href="#" target="_blank" rel="noreferrer">Verify on LinkedIn ↗</a>
+        </aside>
       </div>
     </div>
   </section>
 
-  <section id="profile">
+  <section id="principles">
     <div class="wrap">
       <div class="section-head">
-        <div class="kicker">Profile</div>
+        <div class="kicker">Engineering principles</div>
         <div>
-          <h2>Hands-on senior engineering across backend and systems.</h2>
-          <p class="section-copy">
-            I work best on technically substantial products where backend design, implementation quality and delivery all matter. I stay close to the code while taking ownership of the wider engineering problem.
-          </p>
+          <h2>Practices backed by actual work.</h2>
+          <p class="section-copy">No generic “passion” claims; each principle is traceable to a project or professional result.</p>
         </div>
       </div>
-
-      <div class="profile-grid">
-        <div class="profile-card">
-          <h3>Education</h3>
-          <p>Computer Science, AGH University of Krakow. Engineering thesis on user identification based on signature dynamics.</p>
-          <div class="education-row"><strong>B.Eng. (Engineer), Computer Science</strong><span>2014 — 2019</span></div>
-        </div>
-        <div class="profile-card">
-          <h3>Public profile</h3>
-          <p>Based in Kraków. Public work spans backend engineering, cloud integrations, systems programming, game technology and reverse engineering.</p>
-          <div class="actions">
-            <a class="btn" href="https://www.linkedin.com/in/andrzej-lis-1b4830a6/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-            <a class="btn" href="https://github.com/lisu188" target="_blank" rel="noreferrer">GitHub ↗</a>
-          </div>
-        </div>
-      </div>
+      <div id="principles-grid" class="principles-grid"></div>
     </div>
   </section>
 
   <section id="contact">
-    <div class="wrap contact">
-      <div>
-        <div class="kicker">Contact</div>
-        <h2>Looking for a senior backend engineer?</h2>
-        <p>Java/Kotlin backend, distributed systems, system design, messaging, databases and pragmatic delivery ownership.</p>
-      </div>
-      <div class="actions">
-        <a class="btn primary" href="mailto:andrzej.lis3@gmail.com">andrzej.lis3@gmail.com</a>
+    <div class="wrap">
+      <div class="contact-card">
+        <div class="contact-grid">
+          <div>
+            <div class="kicker">Contact</div>
+            <h2>Looking for a Senior Java/Kotlin Backend Engineer?</h2>
+            <p>Use the CV for the concise career history, GitHub for implementation evidence and LinkedIn for the public professional profile.</p>
+            <div class="contact-meta">Kraków, Poland · <span id="email-label">andrzej.lis3@gmail.com</span></div>
+          </div>
+          <div class="actions">
+            <a id="cv-bottom" class="btn primary" href="assets/Andrzej-Lis-CV.pdf" download>Download CV</a>
+            <a id="linkedin-bottom" class="btn" href="#" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a id="github-bottom" class="btn" href="#" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a id="email-bottom" class="btn" href="#">Email</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="wrap footer">
-  <span>© 2026 Andrzej Lis</span>
-  <span>Senior Software Engineer · Kraków</span>
+  <span>Andrzej Lis · Senior Java/Kotlin Backend Engineer</span>
+  <span>© <span id="footer-year"></span> · Static portfolio on GitHub Pages</span>
 </footer>
+
+<script src="assets/portfolio-data.js"></script>
+<script src="assets/app.js"></script>
 </body>
 </html>

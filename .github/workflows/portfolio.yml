@@ -1,0 +1,35 @@
+name: Portfolio quality
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate portfolio structure and content
+        run: python3 scripts/check_portfolio.py
+      - name: Start static server
+        run: |
+          python3 -m http.server 8000 >/tmp/frontpage-http.log 2>&1 &
+          echo $! > /tmp/frontpage-http.pid
+          sleep 2
+      - name: Install Chromium
+        run: npx --yes playwright@1.55.0 install --with-deps chromium
+      - name: Capture desktop screenshot
+        run: npx --yes playwright@1.55.0 screenshot --browser=chromium --viewport-size="1440,1200" --full-page http://127.0.0.1:8000/ frontpage-desktop.png
+      - name: Capture mobile screenshot
+        run: npx --yes playwright@1.55.0 screenshot --browser=chromium --viewport-size="390,844" --full-page http://127.0.0.1:8000/ frontpage-mobile.png
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-screenshots
+          path: |
+            frontpage-desktop.png
+            frontpage-mobile.png
