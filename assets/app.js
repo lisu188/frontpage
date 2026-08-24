@@ -8,6 +8,7 @@
     return n;
   };
   const tags = (items) => `<div class="tags">${items.map(x => `<span>${x}</span>`).join("")}</div>`;
+  const chips = (items) => `<div class="role-chips">${items.map(x => `<span>${x}</span>`).join("")}</div>`;
   const link = (href, label, cls = "text-link") => `<a class="${cls}" href="${href}" target="_blank" rel="noreferrer">${label} ↗</a>`;
 
   document.title = `${d.profile.name} — ${d.profile.title}`;
@@ -83,24 +84,27 @@
   $("#jvm-lab-topics").innerHTML = tags(d.jvmLab.topics);
   $("#jvm-lab-link").href = d.jvmLab.repo;
 
-  $("#experience-list").replaceChildren(...d.experience.map((r, i) => {
+  $("#experience-list").replaceChildren(...d.experience.map(r => {
     const n = el("article", "role-card");
     n.innerHTML = `
       <div class="role-period">${r.period}</div>
-      <div>
-        <div class="role-index">0${i + 1}</div>
+      <div class="role-track" aria-hidden="true"><span></span></div>
+      <div class="role-content">
         <h3>${r.title}</h3>
         <div class="role-company">${r.company}</div>
-        <p>${r.technical}</p>
+        <p class="role-summary">${r.technical}</p>
         <p class="secondary">${r.secondary}</p>
-        ${tags(r.stack)}
+        <div class="role-meta">
+          <div><small>Ownership</small>${chips(r.ownership)}</div>
+          <div><small>Technology</small>${chips(r.technology)}</div>
+        </div>
       </div>`;
     return n;
   }));
 
   const impact = d.impactStory;
   $("#impact-story").innerHTML = `
-    <div class="kicker">Measured impact</div>
+    <div class="kicker">Measured professional impact</div>
     <h3>${impact.title}</h3>
     <div class="impact-grid">
       <div><span>Problem</span><p>${impact.problem}</p></div>
@@ -114,7 +118,7 @@
       <span class="source">${x.source}</span>
       <h3>${x.title}</h3>
       <dl><dt>Decision</dt><dd>${x.decision}</dd><dt>Trade-off</dt><dd>${x.tradeoff}</dd></dl>
-      ${link(x.repo, "Source")}`;
+      ${link(x.repo, "Inspect source")}`;
     return n;
   }));
 
@@ -128,7 +132,7 @@
         <h3>${x.name}</h3>
         <p>${x.summary}</p>
         ${tags(x.tags)}
-        <div class="inline-links">${link(x.repo, "Repository")}${x.secondaryRepo ? link(x.secondaryRepo, "Related repo") : ""}</div>
+        <div class="inline-links">${link(x.repo, "Explore source code")}${x.secondaryRepo ? link(x.secondaryRepo, "Related source") : ""}</div>
       </div>`;
     return n;
   }));
