@@ -1,7 +1,7 @@
 window.PORTFOLIO_DATA = {
   profile: {
     name: "Andrzej Lis",
-    title: "Senior Software Engineer",
+    title: "Senior / Lead Software Engineer",
     positioning: "Java / Kotlin Backend Engineer",
     location: "Kraków, Poland",
     email: "andrzej.lis3@gmail.com",
@@ -10,7 +10,7 @@ window.PORTFOLIO_DATA = {
     cv: "assets/Andrzej-Lis-CV.pdf",
     avatar: "https://avatars.githubusercontent.com/u/7967861?v=4",
     years: "12+",
-    summary: "Hands-on Senior Software Engineer with 12+ years of experience building and maintaining enterprise backend systems. Java and Kotlin are my primary stack, backed by Spring, messaging, relational and document databases, CI/CD, system design and technical mentoring."
+    summary: "Senior software engineer focused on JVM backend architecture, cloud systems and technical leadership. My work spans production Java/Kotlin services, concurrency and distributed systems, with hands-on depth in C++, performance engineering, game technology and reverse engineering."
   },
   heroSignals: [
     { value: "12+", label: "years building production software" },
@@ -43,15 +43,15 @@ window.PORTFOLIO_DATA = {
       items: ["Gradle", "Maven", "TeamCity", "Jenkins", "CI/CD", "Docker", "Cloud Run"]
     },
     {
-      title: "Systems breadth",
+      title: "Systems",
       items: ["C++", "C17", "Python", "SDL2", "pybind11", "Reverse engineering"]
     }
   ],
   flagship: {
     name: "WinRisk",
     repo: "https://github.com/lisu188/winrisk",
-    eyebrow: "Flagship Java backend case study",
-    summary: "A non-trivial Java domain engine evolved from a desktop application into a concurrent Spring Boot service with a real-time browser client, while preserving domain independence and deterministic headless execution.",
+    eyebrow: "Java backend architecture",
+    summary: "Modernized a Java strategy-game engine into a concurrent Spring Boot application with REST command handling, real-time WebSocket state updates and a React/TypeScript client. The same engine supports deterministic headless simulation, automated testing and CI quality gates.",
     decisions: [
       "Keep the Java game engine independent from the web layer.",
       "Synchronize state per game session instead of using one global lock.",
@@ -64,8 +64,8 @@ window.PORTFOLIO_DATA = {
   kotlinCase: {
     name: "Spotify Web API Demo",
     repo: "https://github.com/lisu188/spotify-web-api-demo",
-    eyebrow: "Kotlin / cloud backend case study",
-    summary: "A Kotlin and Spring Boot integration service running on Java 21, combining Spotify and Last.fm OAuth flows with asynchronous jobs, Firestore persistence and Google Cloud deployment.",
+    eyebrow: "Kotlin / cloud backend",
+    summary: "Built a Kotlin/Spring backend that combines Spotify and Last.fm data through OAuth integrations and asynchronous processing. It runs on GCP with Cloud Run, Firestore and Secret Manager, with optional AI-assisted music classification.",
     decisions: [
       "Cloud Run for a simple stateless HTTP deployment surface.",
       "Firestore as the persisted source of truth for jobs, tokens and refresh state.",
@@ -77,7 +77,7 @@ window.PORTFOLIO_DATA = {
   jvmLab: {
     name: "JVM Experiments",
     repo: "https://github.com/lisu188/jexperiments",
-    summary: "An executable engineering notebook with 20+ isolated Java/Kotlin modules for runtime, bytecode, language and concurrency questions.",
+    summary: "20+ focused Java and Kotlin experiments exploring bytecode, concurrency, JVM behavior and language/runtime internals.",
     topics: ["Kotlin suspend state machines", "value-class boxing", "Kotlin metadata", "Java lambda bytecode", "CompletableFuture", "Flow.Publisher", "thread pools", "BCEL"]
   },
   experience: [
@@ -85,8 +85,8 @@ window.PORTFOLIO_DATA = {
       period: "Aug 2020 — Present",
       title: "Lead Software Engineer / Resource Manager",
       company: "EPAM Systems · client: Google / Google Fiber",
-      technical: "Own feature design and implementation in a large internal Java codebase for Google Fiber. Work directly with the client technical lead and stakeholders on delivery, risks and results.",
-      secondary: "Led a small delivery team and supported staffing, feedback and professional development across the engagement.",
+      technical: "Design and implement features in a large internal Java codebase for Google Fiber, working directly with the client technical lead and stakeholders on architecture, delivery risks and outcomes.",
+      secondary: "Lead a small delivery team while supporting staffing, feedback and engineer development across the engagement.",
       stack: ["Java 8", "large-scale codebase", "feature design", "delivery ownership"]
     },
     {
@@ -123,7 +123,7 @@ window.PORTFOLIO_DATA = {
     }
   ],
   impactStory: {
-    title: "Developer feedback loops are a product feature",
+    title: "Cutting the CI feedback loop from 2 hours to 30 minutes",
     problem: "A long-running client program had CI/CD builds taking roughly two hours, slowing feedback and diagnosis.",
     intervention: "Led delivery-pipeline improvements and built internal tooling to monitor builds and improve failure diagnostics.",
     outcome: "Build time dropped to roughly thirty minutes — about a 4× improvement in feedback speed."
@@ -165,14 +165,14 @@ window.PORTFOLIO_DATA = {
       repo: "https://github.com/lisu188/fall-of-nouraajd",
       image: "https://raw.githubusercontent.com/lisu188/fall-of-nouraajd/main/screenshots/nouraajd-exploration.png",
       imageAlt: "Fall of Nouraajd map exploration interface",
-      summary: "C++ dark-fantasy 2D game with Python plugins, SDLrendering, pybind11 bindings, JSON-authored content, headless automation, validation tooling and a 90% eligible-line coverage gate.",
+      summary: "Building a dark-fantasy RPG as a systems-engineering project: a custom C++ engine, Python gameplay layer, SDL2 rendering and pybind11 integration, supported by headless automation, content validation and a 90% eligible-line coverage gate.",
       tags: ["C++", "Python", "SDL2", "pybind11", "CMake", "Automation"]
     },
     {
       category: "Reverse engineering",
       name: "Clash Disassembly",
       repo: "https://github.com/lisu188/clash-disassembly",
-      summary: "Evidence-driven recovery of a Win95 game binary. The repository maps 4,070 recovered functions to 138 independently compiled translation units and validates recovered C17/SDL behavior against the original assembly source of truth.",
+      summary: "Reverse-engineering and reconstructing a Windows 95 game from its original binary. The project maps 4,070 recovered functions into 138 independently compiled C17 translation units and validates behavior against the original assembly.",
       tags: ["Assembly", "C17", "SDL", "4,070 functions", "138 translation units"]
     },
     {
@@ -180,7 +180,7 @@ window.PORTFOLIO_DATA = {
       name: "CLife & vstd",
       repo: "https://github.com/lisu188/clife",
       secondaryRepo: "https://github.com/lisu188/vstd",
-      summary: "C++ work around cellular automata, packed simulation, reproducible benchmarks and reusable concurrency/utility experiments.",
+      summary: "Performance-focused C++ work spanning cellular automata, compact simulation data structures, reproducible benchmarks, concurrency and reusable low-level utilities.",
       tags: ["C++", "Performance", "Benchmarks", "Concurrency"]
     },
     {
@@ -189,14 +189,14 @@ window.PORTFOLIO_DATA = {
       repo: "https://github.com/lisu188/boid3d",
       image: "https://raw.githubusercontent.com/lisu188/boid3d/main/boid3d/icon.png",
       imageAlt: "Boid3D project icon from the repository",
-      summary: "Godot 4 flocking simulation with cohesion, alignment and separation steering plus a spatial hash so agents query nearby neighbours instead of testing the entire flock.",
+      summary: "Godot 4 flocking simulation implementing cohesion, alignment and separation with a spatial hash so agents query nearby neighbours instead of testing the entire flock.",
       tags: ["Godot", "Simulation", "Spatial hash", "Boids"]
     },
     {
       category: "ML / research experiments",
       name: "Neural Backend",
       repo: "https://github.com/lisu188/neural-backend",
-      summary: "Historical TensorFlow/Flask classifier work kept as an engineering archive. It connects to a longer-running interest in pattern recognition and the signature-dynamics thesis, not to a claim of current production TensorFlow specialization.",
+      summary: "An archived TensorFlow/Flask classifier exploring pattern recognition and signature dynamics, retained as part of a longer-running interest in machine-learning research.",
       tags: ["Historical", "TensorFlow 1.x", "Flask", "Pattern recognition"]
     }
   ],
@@ -209,9 +209,9 @@ window.PORTFOLIO_DATA = {
     },
     {
       institution: "Jagiellonian University in Kraków",
-      program: "Additional education listed on public LinkedIn; program/degree is not publicly exposed",
+      program: "Additional studies listed on LinkedIn",
       period: "2021–2025",
-      detail: "Shown transparently without inferring an unverified field of study."
+      detail: "The public profile lists attendance dates; program and degree are not specified."
     }
   ],
   certifications: [
@@ -223,20 +223,20 @@ window.PORTFOLIO_DATA = {
   ],
   principles: [
     {
-      title: "Protect the domain model",
-      text: "Keep core rules independent from delivery layers when the boundary improves testability and evolution."
+      title: "Design for change",
+      text: "Keep boundaries explicit and components replaceable. Prefer simple interfaces and clear ownership over abstractions that make the next change harder."
     },
     {
-      title: "Make concurrency explicit",
-      text: "Prefer clear synchronization, ordering and consistency rules over relying on timing or incidental framework behavior."
+      title: "Make consistency explicit",
+      text: "Define synchronization, ordering and consistency rules directly instead of relying on timing or incidental framework behavior."
     },
     {
-      title: "Automate evidence",
-      text: "Use tests, headless runs, coverage gates, validation and reproducible benchmarks to make claims verifiable."
+      title: "Reproduce before you fix",
+      text: "Understand and reproduce behavior before changing it — whether debugging a distributed service, profiling native code or reverse-engineering an undocumented binary."
     },
     {
-      title: "Optimize feedback loops",
-      text: "Build and test speed affects engineering throughput; measure it and improve it when it becomes a bottleneck."
+      title: "Make changes measurable",
+      text: "Use automated tests, end-to-end validation and performance benchmarks to turn refactoring from guesswork into a controlled engineering process."
     },
     {
       title: "Go below the framework",
@@ -246,7 +246,7 @@ window.PORTFOLIO_DATA = {
   taxonomy: [
     "Backend / JVM",
     "Cloud / Integration",
-    "JVM |internals",
+    "JVM internals",
     "Systems / Native",
     "Reverse engineering",
     "Simulation / Game tech",
