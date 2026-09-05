@@ -1,0 +1,65 @@
+:root{--muted2:#94a5b8}
+[hidden]:not([hidden="until-found"]){display:none!important}
+html{scroll-padding-top:110px}
+[id]{scroll-margin-top:12px}
+.hero{min-height:0;grid-template-columns:1fr;gap:0;padding:54px 0 36px}
+h1{font-size:clamp(38px,5.2vw,68px);line-height:1.04;letter-spacing:-.05em;margin:18px 0;max-width:950px}
+.hero-copy{max-width:780px;font-size:19px;margin:0}
+.track-record{color:var(--blue);font-size:13px;margin:18px 0 0}
+.hero .actions{margin-top:22px}
+.impact-wrap{padding-bottom:44px}
+.impact-story{margin:0;padding:24px}
+.impact-story h2{font-size:30px;margin:10px 0 18px}
+section{padding:56px 0}
+.section-head{gap:30px;margin-bottom:28px}
+h2{font-size:clamp(30px,3.5vw,44px);line-height:1.1}
+.case h3{font-size:clamp(27px,3vw,36px);line-height:1.15}
+.case p{margin-bottom:14px}
+.case p.tradeoff{font-size:14px;color:#b4c2d0}
+.text-link{min-height:44px;display:inline-flex;align-items:center;margin-top:6px}
+.inline-links{column-gap:18px;row-gap:0}
+.arch-diagram{min-height:0;padding:12px}
+.role-content{padding-bottom:26px}
+.role-content h3{font-size:22px;line-height:1.25}
+summary{cursor:pointer;min-height:44px;padding:12px 0;font-weight:750;color:#d7e2ec}
+details{border-top:1px solid var(--line2)}
+details[open]>summary{margin-bottom:16px}
+.earlier-experience,.expertise-details{margin-top:12px}
+.cap-card p,.cert-card p{color:var(--muted);font-size:14px}
+.further-work a{color:#d7e2ec;text-underline-offset:4px}
+.further-work details p{font-size:14px}
+.contact-grid{grid-template-columns:minmax(0,1fr) minmax(200px,280px)}
+.contact-grid .actions{margin-top:0}
+.contact-grid .btn{flex:1 1 110px}
+.contact-meta{overflow-wrap:anywhere}
+.nav-links a{min-height:44px;display:inline-flex;align-items:center}
+@media(max-width:960px){
+  .section-head{gap:12px}
+  .case-grid{gap:20px}
+  .arch-diagram{max-width:580px;width:100%;margin-inline:auto}
+  .impact-story{margin:0}
+}
+@media(max-width:720px){
+  .nav-inner{height:auto;min-height:64px;flex-wrap:wrap;gap:0;padding:6px 0}
+  .brand{width:100%;font-size:14px;line-height:28px}
+  .nav-links{width:100%;gap:10px;justify-content:space-between}
+  .nav-links a:not(.keep){display:inline-flex}
+  .nav-links a{font-size:12px}
+  .hero{padding:32px 0 28px}
+  .hero-copy{font-size:17px}
+  .hero .actions .btn{width:auto;flex:0 0 auto}
+  .hero .actions{gap:8px}
+  .hero .btn{padding:0 13px}
+  .badge{font-size:10px}
+  .badge::before{flex-shrink:0}
+  .track-record{font-size:12px}
+  .impact-story{margin:0;padding:20px}
+  .impact-story h2{font-size:27px}
+  .impact-grid{gap:12px}
+  .impact-wrap{padding-bottom:32px}
+  section{padding:38px 0}
+  .case,.contact-card{padding:20px}
+  .contact-grid{grid-template-columns:1fr}
+  .contact-grid .actions{margin-top:8px}
+  .role-content h3{font-size:20px}
+}
