@@ -1,26 +1,16 @@
 # Andrzej Lis — Senior Java/Kotlin Backend Portfolio
 
-Static GitHub Pages portfolio focused on Senior Software Engineer / Senior Backend Engineer roles.
+**[View the portfolio](https://lisu188.github.io/frontpage/)**
 
-## Positioning
+Static GitHub Pages portfolio for Senior Java/Kotlin Backend Engineer roles. It presents professional impact, two backend case studies, systems-level work and a compact career history.
 
-The portfolio is intentionally ordered by evidence:
+## Content and maintenance
 
-1. Java/Kotlin backend specialization
-2. Current JVM case studies
-3. Professional engineering impact
-4. System-design decisions
-5. Broader systems, reverse-engineering, simulation and ML interests
-6. Education and continued learning
+`index.html` is the source of truth for visible content, destinations and metadata. It is complete HTML: project details, experience, contact links, native expandable sections and structured data work without JavaScript. `assets/app.js` only enhances the active navigation state. There is no framework, dependency bundle or build step.
 
-## Content sources
+The existing visual system remains in `assets/styles.css`; focused layout and accessibility fixes are in `assets/refinements.css`. The CV is `assets/Andrzej-Lis-CV.pdf`.
 
-- `assets/portfolio-data.js` is the single source of truth for page content.
-- CV facts are based on `assets/Andrzej-Lis-CV.pdf`.
-- Public professional-profile data is linked to LinkedIn.
-- Project claims should be backed by public repository READMEs or source.
-
-Do not add unsupported metrics or infer missing education fields.
+Keep professional client work separate from independent projects. Support technical claims with relevant source, test or documentation links. Do not invent missing education details or publish undated, changing project counts. Only add a live-demo link after verifying a working destination; omit unavailable links rather than using `href="#"`.
 
 ## Local preview
 
@@ -34,18 +24,17 @@ Open `http://127.0.0.1:8000/`.
 
 ```sh
 python3 scripts/check_portfolio.py
+python3 -m pip install playwright==1.55.0
+python3 -m playwright install --with-deps chromium
+python3 scripts/test_portfolio.py
 ```
 
-The CI workflow also renders desktop and mobile screenshots with Playwright and uploads them as artifacts.
+The browser suite starts its own server and tests the `/frontpage/` deployment prefix. It covers desktop, tablet, mobile and 320-pixel layouts with JavaScript enabled and disabled, keyboard navigation, expandable content, placeholder links, hidden-state styling, missing JavaScript, reduced motion and the actual CV download. Screenshots and layout metrics are written to `artifacts/` and uploaded by CI.
 
-## Updating content
+For restricted local render environments, `PORTFOLIO_OFFLINE=1` embeds the supplied styles and script directly into the test document; the HTTP-download test is explicitly skipped. `PORTFOLIO_BROWSER_EXECUTABLE` selects an installed Chromium, and `PORTFOLIO_ARTIFACTS` changes the output directory. CI uses the full HTTP suite, not offline mode.
 
-1. Edit `assets/portfolio-data.js`.
-2. Keep `index.html` structural; do not duplicate factual project/experience copy there unless needed for metadata or progressive rendering.
-3. Run `python3 scripts/check_portfolio.py`.
-4. Preview at desktop and mobile widths.
-5. Verify external project and profile links before merging.
+Before merging, run both checks, review the screenshots, verify new external evidence links, and update visible copy together with relevant metadata.
 
 ## Deployment
 
-GitHub Pages can deploy directly from the `main` branch and repository root.
+GitHub Pages deploys directly from the `main` branch and repository root. The published page does not depend on running a content renderer in the visitor's browser.
