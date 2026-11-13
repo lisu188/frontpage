@@ -31,7 +31,7 @@ jobs:
         run: python3 scripts/test_portfolio.py
       - name: Upload screenshots and layout metrics
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: portfolio-screenshots
           path: artifacts/
